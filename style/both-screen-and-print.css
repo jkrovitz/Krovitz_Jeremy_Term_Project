@@ -1,0 +1,46 @@
+/*
+File: both-screen-and-print.css
+Author: Jeremy Krovitz
+Description: Styles used for both screen and print media
+*/
+
+/* Styles used across all html pages for both screen and print media */
+header,
+footer {
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: #01426a;
+}
+
+ul.citations {
+    list-style-type: none;
+    text-align: left;
+}
+
+/* Styles used for tables in population.html in both screen and print media */
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin: 2em auto;
+}
+
+table caption {
+    font-size: 1.2em;
+    display: table-caption;
+    text-align: center;
+}
+
+td,
+th {
+    padding: 8px;
+    width: 33.33%;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}

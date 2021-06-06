@@ -1,0 +1,356 @@
+/*
+File: screen.css
+Author: Jeremy Krovitz
+Description: Styles used for screen media
+*/
+
+/* Styles used across all html pages for screen media */
+@media screen {
+    * {
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background-color: #d6eef8;
+    }
+
+    header {
+        overflow: hidden;
+    }
+
+    nav {
+        width: 100%;
+        border-top: 2px solid #fff;
+        padding-top: 10px;
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        color: #fff;
+        text-align: center;
+        padding: 16px 16px;
+        text-decoration: none;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    nav a:hover {
+        border: solid 4px #ccc;
+        background-color: #fff;
+        color: #01426a;
+    }
+
+    header,
+    footer {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        padding: 5px;
+        color: #fff;
+        background: #1c252e;
+    }
+
+    footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    ul.citations {
+        line-height: 1.6;
+        font-size: 0.75em;
+    }
+
+    footer p,
+    footer a {
+        color: #fff;
+    }
+
+    main {
+        background-color: #d6eef8;
+    }
+
+    main a,
+    main a:link,
+    main a:visited {
+        color: #0000ff;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+
+    main a:hover,
+    main a:focus,
+    main a:active {
+        padding: 2px;
+        border: solid 1px #0000ff;
+        background-color: #fff;
+    }
+
+    figure {
+        display: inline-block;
+        background: #fff;
+        padding: 15px;
+        border: 3px solid #01426a;
+        box-shadow: 10px 10px 10px #999;
+        position: relative;
+        font-size: 0.75em;
+    }
+
+    figure > img {
+        width: 100%;
+    }
+
+    figcaption a:hover,
+    figcaption a:focus,
+    figcaption a:active {
+        border-radius: 2px;
+        border: 1px solid #01426a;
+        background-color: #fff;
+        color: #01426a !important;
+    }
+
+    h2,
+    h3 {
+        margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 1.4em;
+        }
+
+        h2 {
+            font-size: 1.25em;
+        }
+
+        h3 {
+            font-size: 1.12em;
+        }
+    }
+
+    .copyright-class {
+        border-top: 1px solid #ddd;
+        padding-top: 1em;
+        margin: 0 2em;
+    }
+
+    /* Styles used on history.html, index.html, and tourism.html for screen media */
+    .image-row {
+        text-align: center;
+    }
+
+    .image-row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .image-column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 775px) {
+        .image-column {
+            width: 98%;
+        }
+    }
+
+    /* Style used on history.html, population.html, and tourism.html for screen media */
+    p {
+        margin-left: 2rem;
+        color: #000;
+    }
+
+    /* Styles used on index.html and tourism.html for screen media */
+    video {
+        max-width: 100%;
+        min-width: 100%;
+        height: auto;
+    }
+
+    video + figcaption {
+        padding-left: 2em;
+    }
+
+    video + figcaption,
+    video + figcaption a {
+        background-color: #2367d3;
+        color: #fff !important;
+    }
+
+    .video-class {
+        width: 70%;
+        display: inline-block;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .video-class video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Styles used on history.html and tourism.html for screen media */
+    .mpls-panorama,
+    .spoonbridge-and-cherry {
+        width: 80%;
+        display: inline-block;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .mpls-panorama img,
+    .spoonbridge-and-cherry img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Styles used on history.html for screen media */
+    .image-three-column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 775px) {
+        .image-three-column {
+            width: 98%;
+        }
+    }
+
+    /* Styles used on index.html for screen media */
+    .text-content {
+        padding: 2rem;
+    }
+
+    .minneapolis-image,
+    .saint-paul-image {
+        width: 271px;
+        height: 141px;
+    }
+
+    .minneapolis-image-caption,
+    .saint-paul-image-caption {
+        width: 271px;
+    }
+
+    /* Styles used on population.html for screen media */
+    #mn-metro-map-figure {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        text-align: center;
+    }
+
+    .header-superscript-text {
+        font-weight: lighter;
+    }
+
+    caption {
+        font-size: 1.5em !important;
+        font-style: italic;
+        margin-bottom: 5px;
+        color: #01426a;
+    }
+
+    th {
+        background-color: #01426a;
+        color: #fff;
+    }
+
+    td {
+        color: #01426a;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ddd;
+    }
+
+    tr:hover,
+    th:hover,
+    td:hover {
+        background-color: #fff;
+        border: solid 6px #ff7753;
+        color: #ff7753;
+    }
+
+    #minneapolis-population,
+    #saint-paul-population {
+        background: #fff;
+        border: 2px inset #01426a;
+        display: inline-block;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 50px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #minneapolis-population > ul,
+    #saint-paul-population > ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+
+    /* Styles used on tourism.html for screen media */
+    #moa-section,
+    #sculpture-garden-section,
+    #guthrie-theater-section {
+        padding-bottom: 50px;
+    }
+
+    #moa-print-description {
+        display: none;
+    }
+
+    #moa-image-1,
+    #moa-image-2 {
+        width: 338px;
+        height: 225px;
+    }
+
+    .moa-image-caption {
+        width: 338px;
+    }
+
+    #walker-art-center-print-description {
+        display: none;
+    }
+
+    #guthrie-theater-print-description {
+        display: none;
+    }
+
+    #guthrie-theater-figure {
+        display: none;
+    }
+}
