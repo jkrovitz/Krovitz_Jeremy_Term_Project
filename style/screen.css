@@ -21,7 +21,6 @@ Description: Styles used for screen media
     }
 
     nav {
-        width: 100%;
         border-top: 2px solid #fff;
         padding-top: 10px;
     }
@@ -42,6 +41,49 @@ Description: Styles used for screen media
         background-color: #fff;
         color: #01426a;
     }
+
+	nav .hamburger-menu-icon {
+		display: none;
+	}
+
+	@media screen and (max-width: 600px) {
+
+		.main-nav a:not(:last-child) {
+			display: none;
+			margin-left: 10px;
+		}
+
+		.main-nav .hamburger-menu-icon {
+			float: right;
+			display: block;
+		}
+
+		.hamburger-menu-icon {
+			font-size: 1.3em;
+		}
+
+		.main-nav.mobile-nav {
+			position: relative;
+			margin-top: 50px;
+		}
+
+		.main-nav.mobile-nav .hamburger-menu-icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		.main-nav.mobile-nav a {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+
+		nav:first-child {
+			margin-top: 50px;
+		}
+
+	}
 
     header,
     footer {
