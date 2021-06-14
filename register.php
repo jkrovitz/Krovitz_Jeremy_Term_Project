@@ -16,12 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     else {
         
-        $query = mysqli_query($conn, "SELECT username, email from register WHERE username='$username';");
+        $query = mysqli_query($conn, "SELECT username from register WHERE username='$username';");
+		$query1 = mysqli_query($conn, "SELECT email from register WHERE email='$email';");
         $data  = mysqli_fetch_assoc($query);
+		$data1 = mysqli_fetch_assoc($query1);
         
         if (!is_null($data["username"])) {
             $errors = "Username already exists!";
-        } elseif (!is_null($data["email"])) {
+        } elseif (!is_null($data1["email"])) {
             $errors = "Email already exists!";
         } else {
             $password = password_hash($password, PASSWORD_DEFAULT);

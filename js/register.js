@@ -50,20 +50,6 @@
         return emailValid;
 	}
 
-// 	function validatePassword(passwordValue, passwordFeedback) {
-//         let passwordValid;
-//         const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})$/;
-//         if (!(PASSWORD_REGEX.test(passwordValue))) {
-//             passwordFeedback.classList.remove('hidden');
-//             passwordValid = false;
-//         } else {
-//             passwordFeedback.setAttribute('class', 'hidden');
-//             passwordValid = true;
-//         }
-//         return passwordValid;
-// 	}
-// }());
-
 	function validatePassword(passwordValue, passwordFeedback) {
 		let passwordValid;
 	let minMaxLength = /^[\s\S]{8,32}$/,
