@@ -1,6 +1,6 @@
 <?php 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$conn = mysqli_connect("localhost", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
+		$conn = mysqli_connect("107.180.91.81", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
 
 		$errors = "";
 		$username = htmlspecialchars($_POST["username"]);
@@ -37,9 +37,9 @@
 	</head>
 
 	<body>
-		<p><?php echo $errors; ?></p>
-		<h1>Login</h1>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+			<p><?php echo $errors; ?></p>
+			<h1>Login</h1>
 			<input type="text" name="username" placeholder="username" />
 			<input type="password" name="password" placeholder="password">
 			<input type="submit" value="Submit">
