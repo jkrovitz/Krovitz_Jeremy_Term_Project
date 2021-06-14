@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Create connection
-    $conn = mysqli_connect("localhost", "jeremykr_twin_cities_forum", "psuh8WIRD.cih8coch", "jeremykr_twin_cities_forum");
+    $conn = mysqli_connect("localhost", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
     
     //We use htmlspecialchars to prevent HTML injection
     $errors   = "";

@@ -1,6 +1,6 @@
 <?php 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$conn = mysqli_connect("localhost", "jeremykr_twin_cities_forum", "psuh8WIRD.cih8coch", "jeremykr_twin_cities_forum");
+		$conn = mysqli_connect("localhost", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
 
 		$errors = "";
 		$username = htmlspecialchars($_POST["username"]);
@@ -16,7 +16,10 @@
 				$errors = "Username doesn't exist!";
 			} else {
 				if (password_verify($password, $data["password"])) {
-					echo "Welcome $username!";
+					session_start();
+					
+					$_SESSION["username"] = $username;
+					header("Location: forum.php");
 				} else {
 					$errors = "Password is not correct!";
 				}
