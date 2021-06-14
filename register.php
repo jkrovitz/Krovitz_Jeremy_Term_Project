@@ -72,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<input type="submit" value="Submit" id="submit" class="disabledSubmit">
 			</div>
 		</form>
+		<p>Already have an account? <a href="login.php">Login</a></p>
 	</body>
 
 </html>
