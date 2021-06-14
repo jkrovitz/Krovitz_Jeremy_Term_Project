@@ -1,5 +1,0 @@
----
-deployment:
-    tasks:
-    - export DEPLOYPATH=/home/jeremykrovitz/public_html/the-twin-cities
-    - /bin/cp -R $DEPLOYPATH
