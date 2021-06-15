@@ -18,12 +18,19 @@
 		if (empty($post_title) or empty($post_desc)) {
 			$errors = "Invalid inputs";
 		} else {
-			$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
-
-			if ($query) {
-				echo "Post created";
+			//make sure post titles are not the same.
+			$query = mysqli_query($conn, "SELECT post_title FROM posting WHERE post_title='$post_title';");
+			$data = mysqli_fetch_assoc($query);
+			if(!is_null($data["post_title"])) {
+				$errors = "Post name already exists!";
 			} else {
-				echo "It did not work";
+				$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
+
+				if ($query) {
+					header("Location: forum.php");
+				} else {
+					echo "It did not work";
+				}
 			}
 		}
 	}
@@ -41,6 +48,7 @@
 
 	<body>
 		<h1>Create a new Post</h1>
+		<a href="forum.php">Go back to the forum</a>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<p><?php echo $errors; ?></p>
 			<input type="text" name="title" placeholder="Title">
