@@ -1,6 +1,6 @@
 <?php 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$conn = mysqli_connect("107.180.91.81", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
+		include '../../connection.php';
 
 		$errors = "";
 		$username = htmlspecialchars($_POST["username"]);

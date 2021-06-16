@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Create connection
-    $conn = mysqli_connect("107.180.91.81", "jeremykr_twin_cities_forum", "woow3ce!CEAT!nus", "jeremykr_twin_cities_forum");
+	include '../../connection.php';
     
     //We use htmlspecialchars to prevent HTML injection
     $errors   = "";
