@@ -1,8 +1,5 @@
 var postTitle = document.getElementById("post-title");
 
-    
-
-
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
     document.getElementById("post-title").innerHTML =

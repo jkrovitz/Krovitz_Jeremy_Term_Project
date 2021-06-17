@@ -5,7 +5,6 @@ Description: Styles used for both screen and print media
 */
 
 /* Styles used across all html pages for both screen and print media */
-header,
 footer {
     text-align: center;
 }

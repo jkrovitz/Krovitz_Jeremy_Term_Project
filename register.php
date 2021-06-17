@@ -46,17 +46,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 
 	<head>
-		<meta charset="utf-8">
 		<title>Registration</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preload" as="style" href="style/screen.css" />
-		<link rel="stylesheet" type="text/css" href="style/screen.css" />
-		<script defer src="js/register.js"></script>
-
+		<meta charset="UTF-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<link href="the-twin-cities/register.php" rel="canonical" />
+		<meta content="Register" name="title" />
+		<meta content="User can create an account, so they can post a review." name="description" />
+		<meta content="Jeremy Krovitz" name="author" />
+		<link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/header.css" rel="preload" as="style" />
+		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<link href="style/review.css" rel="preload" as="style" />
+		<link href="style/review.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+		<script src="js/header.js" defer></script>
+		<script src="js/register.js" defer></script>
 	</head>
 
-	<body>
-		<form name="registrationForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+	<body class="flex-container">
+		<div id="header-container">
+			<headercomponent></headercomponent>
+		</div>
+		<form name="registrationForm" class="add-top-margin"
+			action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<div class="innerFormOutline">
 				<h1>Registration Page</h1>
 				<p><?php echo $errors; ?></p>
@@ -72,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<input type="submit" value="Submit" id="submit" class="disabledSubmit">
 			</div>
 		</form>
-		<p>Already have an account? <a href="login.php">Login</a></p>
+		<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
 	</body>
 
 </html>

@@ -27,7 +27,7 @@
 				$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
 
 				if ($query) {
-					header("Location: forum.php");
+					header("Location: review.php");
 				} else {
 					echo "It did not work";
 				}
@@ -36,25 +36,56 @@
 	}
 
 ?>
+
 <!DOCTYPE html>
 
 <html>
 
 	<head>
-
-		<meta charset="utf-8">
-		<title>Creating posts</title>
+		<title>Create a post</title>
+		<meta charset="UTF-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<link href="the-twin-cities/create_post.php" rel="canonical" />
+		<meta content="Create post" name="title" />
+		<meta content="Create a post." name="description" />
+		<meta content="Jeremy Krovitz" name="author" />
+		<link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/header.css" rel="preload" as="style" />
+		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<link href="style/review.css" rel="preload" as="style" />
+		<link href="style/review.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script> -->
+		<script src="js/header.js" defer></script>
+		<script src="js/create_post.js" defer></script>
+		<script src="js/script.js" defer></script>
 	</head>
 
-	<body>
-		<h1>Create a new Post</h1>
-		<a href="forum.php">Go back to the forum</a>
+	<body class="flex-container">
+		<div id="header-container">
+			<headercomponent></headercomponent>
+		</div>
+		<h2 class="welcome-class">Create a new Post</h2>
+		<div class="center-btn">
+			<a class="create-post-btn" href="review.php">Go back to the forum</a>
+		</div>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<p><?php echo $errors; ?></p>
-			<input type="text" name="title" placeholder="Title">
-			<textarea rows="25" cols="50" name="desc" placeholder="Post description"></textarea>
+			<div id="v-model-textinput">
+				<input v-model="reviewTitle" type="text" name="title" placeholder="Title">
+				<p>{{reviewTitle}}</p>
+			</div>
+			<div id="v-model-textarea">
+				<textarea v-model="reviewDescription" rows="25" cols="50" name="desc"
+					placeholder="Post description"></textarea>
+				<p>{{ reviewDescription }}</p>
+			</div>
 			<input type="submit" value="Submit" />
 		</form>
+		<div id="footer-container">
+			<footercomponent></footercomponent>
+		</div>
 	</body>
 
 </html>

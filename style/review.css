@@ -1,0 +1,54 @@
+.review-table {
+	border-collapse: collapse;
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.review-table td, .review-table th {
+	border: 1px solid #01426a;
+	color: #01426a;
+}
+
+td {
+	background-color: white;
+	padding: 10px;
+}
+
+.registration-login-message {
+	text-align: center;
+}
+
+.welcome-class {
+	color: #01426a;
+	text-align: center;
+}
+
+.create-post-btn {
+	padding: 20px;
+	text-align: center;
+	background-color: #01426a;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	width: 200px;
+	min-width: 180px;
+}
+
+.create-post-btn:hover {
+	background-color: white;
+	border: 2px solid #01426a;
+	color: #01426a;
+}
+
+.center-btn {
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+
+.review-copyright-class {
+	text-align: center;
+}

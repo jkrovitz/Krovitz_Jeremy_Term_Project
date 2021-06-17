@@ -16,76 +16,6 @@ Description: Styles used for screen media
         background-color: #d6eef8;
     }
 
-    header {
-        overflow: hidden;
-    }
-
-    nav {
-        border-top: 2px solid #fff;
-        padding-top: 10px;
-    }
-
-    nav a {
-        float: left;
-        display: block;
-        color: #fff;
-        text-align: center;
-        padding: 16px 16px;
-        text-decoration: none;
-        margin: 0;
-        overflow: hidden;
-    }
-
-    nav a:hover {
-        border: solid 4px #ccc;
-        background-color: #fff;
-        color: #01426a;
-    }
-
-	nav .hamburger-menu-icon {
-		display: none;
-	}
-
-	@media screen and (max-width: 600px) {
-
-		.main-nav a:not(:last-child) {
-			display: none;
-			margin-left: 10px;
-		}
-
-		.main-nav .hamburger-menu-icon {
-			float: right;
-			display: block;
-		}
-
-		.hamburger-menu-icon {
-			font-size: 1.3em;
-		}
-
-		.main-nav.mobile-nav {
-			position: relative;
-			margin-top: 50px;
-		}
-
-		.main-nav.mobile-nav .hamburger-menu-icon {
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-
-		.main-nav.mobile-nav a {
-			float: none;
-			display: block;
-			text-align: left;
-		}
-
-		nav:first-child {
-			margin-top: 50px;
-		}
-
-	}
-
-    header,
     footer {
         flex-grow: 0;
         flex-shrink: 0;
@@ -442,5 +372,29 @@ Description: Styles used for screen media
 		color: #842029;
 		background-color: #f8d7da;
 		border-color: #f5c2c7;
+	}
+
+	.login {
+		position: relative;
+		margin: 30px auto;
+		padding: 20px 20px 20px;
+		width: 500px;
+		border-radius: 3px;
+	}
+
+	.add-top-margin {
+		margin-top: 50px;
+	}
+
+	.welcome-class{
+		text-align: center;
+	}
+
+	.create-post-btn {
+		margin: 0 auto;
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+
 	}
 }
