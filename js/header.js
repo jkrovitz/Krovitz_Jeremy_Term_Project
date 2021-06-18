@@ -33,7 +33,7 @@ function showAndHideNav() {
 
 Vue.component('footercomponent',{
    template : `<footer>
-            <p class="copyright-class review-copyright-class">Jeremy Krovitz &copy; 2021</p>
+            <p class="copyright-class">Jeremy Krovitz &copy; 2021</p>
         </footer>`
 });
 var vm = new Vue({

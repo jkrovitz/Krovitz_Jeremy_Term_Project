@@ -20,7 +20,6 @@ Description: Styles used for screen media
         flex-grow: 0;
         flex-shrink: 0;
         flex-basis: auto;
-        padding: 5px;
         color: #fff;
         background: #1c252e;
     }
@@ -41,12 +40,18 @@ Description: Styles used for screen media
     }
 
     ul.citations {
+		background: #1c252e;
         line-height: 1.6;
         font-size: 0.75em;
+		margin-bottom: 0;
+		color: #fff;
+		padding: 20px;
+		border-bottom: 1px solid #ddd;
     }
 
     footer p,
-    footer a {
+    footer,
+	ul.citations a {
         color: #fff;
     }
 
@@ -54,17 +59,26 @@ Description: Styles used for screen media
         background-color: #d6eef8;
     }
 
-    main a,
-    main a:link,
-    main a:visited {
-        color: #0000ff;
-        text-decoration: underline;
+	a {
+		text-decoration: underline;
         text-underline-position: under;
+	}
+
+    main a :not(.citations),
+    main a:link :not(.citations),
+    main a:visited :not(.citations),
+	sup a,
+	sup a:link,
+	sup a:visited {
+        color: #0000ff;
     }
 
-    main a:hover,
-    main a:focus,
-    main a:active {
+    main a:hover :not(.citations),
+    main a:focus :not(.citations),
+    main a:active :not(.citations),
+	sup a:hover,
+	sup a:focus, 
+	sup a:active {
         padding: 2px;
         border: solid 1px #0000ff;
         background-color: #fff;
@@ -113,9 +127,9 @@ Description: Styles used for screen media
     }
 
     .copyright-class {
-        border-top: 1px solid #ddd;
         padding-top: 1em;
         margin: 0 2em;
+		text-align: center;
     }
 
     /* Styles used on history.html, index.html, and tourism.html for screen media */

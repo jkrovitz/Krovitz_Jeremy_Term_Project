@@ -7,11 +7,15 @@
     body {
         margin: 0;
         background-color: #d6eef8;
+				width: 100%;
+				position: absolute;
+				overflow-x: hidden;
     }
 
 	header {
 		text-align: center;
         overflow: hidden;
+		width: 100%;
     }
 
     nav {

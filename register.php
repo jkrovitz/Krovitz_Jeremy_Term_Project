@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<div class="innerFormOutline">
 				<h1>Registration Page</h1>
-				<p><?php echo $errors; ?></p>
+				<!-- <p><?php echo $errors; ?></p> -->
 				<input type="text" id="username" name="username" placeholder="username">
 				<p id="usernameFeedback" class="hidden">Username must have length between 5 and 20 characters. It can
 					may

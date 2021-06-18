@@ -14,11 +14,14 @@
 		<meta charset="utf-8">
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
 		</script>
 		<script defer src="js/header.js"></script>
+		<script defer src="js/review.js"></script>
 	</head>
 
 	<body>
@@ -36,17 +39,31 @@
 
 			?>
 
+		<p id="post-title"></p>
+
 		<table class="review-table">
 			<?php
 					//This statement turns the sql datatable that is output from the select statement into an associative array. It gives four keys post_id, poster, post_title, post_description. This statement has an associative array for onlyone row in the select table, so we put it inside of a while loop.
 					
 	
 		while($data = mysqli_fetch_assoc($query)) {
-			$json_data = json_encode($data);
-			$myfile = fopen("data.json", "w");
-			fwrite($myfile, $json_data);
-		echo "<tr><td><a href='show_content.php?title=".$data["post_title"]."'>".$data["post_title"]."</a> by ".$data["poster"]."</td></tr>";
+		$url = "show_content.php?id=".$data["post_id"];
+	
+		$postdata[] = array(
+			"post_id" =>  $data["post_id"],
+			"post_title" => $data["post_title"],
+			"poster" => $data["poster"],
+			"post_desc" => $data["post_desc"],
+			"url" => $url
+		);
 		}
+
+		$file = "data.json";
+
+		if (file_put_contents($file, json_encode($postdata)))
+		echo("file created");
+		else 
+		echo ("failed");
 		?>
 
 		</table>

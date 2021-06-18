@@ -39,8 +39,6 @@
 		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<link href="style/account.css" rel="preload" as="style" />
-		<link href="style/account.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<script defer src="js/header.js"></script>
 	</head>
@@ -51,10 +49,10 @@
 		</div>
 		<div class="login">
 			<form class="add-top-margin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-				<p><?php echo $errors; ?></p>
 				<h1>Login</h1>
 				<input type="text" name="username" placeholder="username" />
 				<input type="password" name="password" placeholder="password">
+				<p><?php echo $errors; ?></p>
 				<input type="submit" value="Submit">
 			</form>
 		</div>

@@ -26,32 +26,39 @@
 			<headercomponent></headercomponent>
 		</div>
 		<a href="review.php">Go back to the forum</a>
-		<h1 id="post-title"></h1>
-		<h2 id="poster"></h2>
-		<p id="post-desc"></p>
-		<script type="text/javascript">
+
+
 		<?php 
 			include '../../connection.php';
-			$title = $_GET["title"];
 
-			if(is_null($title)) {
+		$id = $_GET['id'];
+
+
+			if(is_null($id)) {
 				header("Location: review.php");
 			}
 			
-			$query = mysqli_query($conn, "SELECT post_id, poster, post_title, post_desc FROM posting WHERE  post_title='$title';");
-			$data = mysqli_fetch_assoc($query);
+			$query = mysqli_query($conn, "SELECT post_id, poster, post_title, post_desc FROM posting WHERE  post_id='$id';");
+			$review_data = mysqli_fetch_assoc($query);
 
-			if(is_null($data["post_title"])) {
+			if(is_null($review_data["post_id"])) {
 				header("Location: review.php");
 			}
+
+			$review_file = "show_content.json";
+			if(file_put_contents($review_file, json_encode($review_data)))
+			echo("file created");
+			else echo ("failed");
 		?>
+		<p id="post-id"></p>
+		<h1 id="post-title"></h1>
+		<h2 id="poster"></h2>
+		<p id="post-desc"></p>
 
-
-		let json_data = <?php echo json_encode($data); ?>;
-		document.getElementById("post-title").textContent = json_data['post_title'];
-		document.getElementById("poster").textContent = json_data["poster"];
-		document.getElementById("post-desc").textContent = json_data["post_desc"];
-		</script>
+		<script defer src="js/show-content.js"></script>
+		<div id="footer-container">
+			<footercomponent></footercomponent>
+		</div>
 
 	</body>
 
