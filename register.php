@@ -53,15 +53,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta content="Register" name="title" />
 		<meta content="User can create an account, so they can post a review." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
+		<?php include 'favicons.php'; ?>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/all-style.css" rel="preload" as="style" />
 		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script src="js/header.js" defer></script>
 		<script src="js/register.js" defer></script>
 	</head>
@@ -72,27 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div id="header-container">
 					<headercomponent></headercomponent>
 				</div>
-<<<<<<< HEAD
-				<form name="registrationForm" class="add-top-margin"
-					action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-					<div class="innerFormOutline">
-						<h1>Registration Page</h1>
-						<!-- <p><?php echo $errors; ?></p> -->
-						<input type="text" id="username" name="username" placeholder="username">
-						<p id="usernameFeedback" class="hidden">Username must have length between 5 and 20 characters.
-							It can
-							may
-							only consist of alphanumeric characters, -, or _.</p>
-						<input type="text" id="email" name="email" placeholder="E-mail">
-						<p id="emailFeedback" class="hidden">Invalid email.</p>
-						<input type="password" id="password" name="password" placeholder="Password" autocomplete="on">
-						<p id="passwordFeedback" class="hidden">Password must contain one lowercase letter, one
-							uppercase
-							letter, one digit, one special character, and is at least eight characters long.</p>
-						<input type="submit" value="Submit" id="submit" class="disabledSubmit">
-					</div>
-				</form>
-=======
 				<div class="add-margin">
 					<form name="registrationForm" class="add-top-margin"
 						action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
@@ -116,7 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						</div>
 					</form>
 				</div>
->>>>>>> 7764fef (Add logout functionality and style)
 				<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
 			</div>
 			<div id="footer-container">

@@ -12,18 +12,15 @@
 	<head>
 		<title>Reviews of the Twin Cities</title>
 		<meta charset="utf-8">
+		<?php include 'favicons.php'; ?>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
-		<link href="style/all-styles.css" rel="preload" as="style" />
-		<link href="style/all-styles.css" rel="stylesheet" type="text/css" />
-		<link href="style/screen.css" rel="preload" as="style" />
-		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 
-
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script defer src="js/header.js"></script>
 		<script defer src="js/review.js"></script>
 	</head>
@@ -32,9 +29,13 @@
 		<div id="header-container">
 			<headercomponent></headercomponent>
 		</div>
-		<h2 class="welcome-class">Welcome <?php echo $_SESSION["username"] ?>!</h2>
+		<h2 id="welcome-id-review" class="welcome-class">Welcome <?php echo $_SESSION["username"] ?>!</h2>
+		<p id="review-page-description">Click <span id="review-page-description-span">Write a review about the Twin
+				Cities</span> to write a review or click on an
+			existing review to see its
+			description.</p>
 		<div class="center-btn">
-			<a class="create-post-btn" href="create_post.php">Write a review about the Twin Cities</a>
+			<a class="create-post-btn" href="write_review.php">Write a review about the Twin Cities</a>
 		</div>
 		<?php
 			include '../../connection.php';
@@ -47,7 +48,6 @@
 
 		<table class="review-table">
 			<?php
-					//This statement turns the sql datatable that is output from the select statement into an associative array. It gives four keys post_id, poster, post_title, post_description. This statement has an associative array for onlyone row in the select table, so we put it inside of a while loop.
 					
 	
 		while($data = mysqli_fetch_assoc($query)) {

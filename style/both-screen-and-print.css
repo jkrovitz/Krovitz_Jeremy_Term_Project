@@ -26,12 +26,6 @@ table {
     margin: 2em auto;
 }
 
-table caption {
-    font-size: 1.2em;
-    display: table-caption;
-    text-align: center;
-}
-
 td,
 th {
     padding: 8px;

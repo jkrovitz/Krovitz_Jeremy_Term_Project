@@ -17,9 +17,13 @@ Description: Styles used for screen media
 				width: 100%;
 				min-height: 100%;
 				position: relative;
+
+				overflow-x: hidden;
 				
 				
     }
+
+	
 /* 
     footer {
         flex-grow: 0;
@@ -118,18 +122,38 @@ Description: Styles used for screen media
         margin-left: 2rem;
     }
 
+	table caption {
+		font-size: 1.5em;
+		display: table-caption;
+		text-align: center;
+        font-style: italic;
+        margin-bottom: 5px;
+        color: #01426a;
+}
+
+
     @media screen and (max-width: 600px) {
         h1 {
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
 
         h2 {
-            font-size: 1.25em;
+            font-size: 1.00em;
         }
 
         h3 {
-            font-size: 1.12em;
+            font-size: 0.98em;
         }
+		p, td, th, li, a{
+			font-size: 0.8em;
+		}
+
+		table caption {
+			font-size: 0.9.5em;
+		}
+
+
+
     }
 
 	#page-container {
@@ -144,15 +168,6 @@ Description: Styles used for screen media
     .copyright-class {
         /* padding-top: 1em;
         margin: 0;
-<<<<<<< HEAD
-		text-align: center;
-		flex-shrink: 0;
-		position: relative;
-		bottom: 0;
-		width: 100%;
-		height: 2.5rem;     */
-		text-align: center;
-=======
 		text-align: center;
 		flex-shrink: 0;
 		position: relative;
@@ -160,16 +175,12 @@ Description: Styles used for screen media
 		width: 100%;
 		height: 2.5rem;     */
 		/* text-align: center;
->>>>>>> 7764fef (Add logout functionality and style)
 		position: relative;
   bottom: 0;
   padding-top: 1em;
   width: 100%;
   height: 2.5rem;    
 		background: #1c252e; 
-<<<<<<< HEAD
-		margin: 0;
-=======
 		margin: 0; */
 	
 		position: relative;
@@ -181,7 +192,6 @@ Description: Styles used for screen media
    padding: 1em;
    text-align: center;
 
->>>>>>> 7764fef (Add logout functionality and style)
     }
 
     /* Styles used on history.html, index.html, and tourism.html for screen media */
@@ -291,6 +301,21 @@ Description: Styles used for screen media
         width: 271px;
     }
 
+	@media only screen and (max-width: 600px) {
+		.minneapolis-image,
+		.saint-paul-image {
+			width: 135.50px;
+			height: 70.50px;
+		}
+
+		.minneapolis-image-caption,
+    	.saint-paul-image-caption {
+        	width: 135.50px;
+    	}
+
+
+	}
+
     /* Styles used on population.html for screen media */
     #mn-metro-map-figure {
         width: 50%;
@@ -303,8 +328,8 @@ Description: Styles used for screen media
         font-weight: lighter;
     }
 
-    caption {
-        font-size: 1.5em !important;
+    figure caption {
+        font-size: 1.5em;
         font-style: italic;
         margin-bottom: 5px;
         color: #01426a;
@@ -427,7 +452,7 @@ Description: Styles used for screen media
 		padding: 30px;
 	}
 
-	input[type="text"], input[type="password"] {
+	input[type="text"], input[type="password"], textarea {
 		width: 100%;
 		padding: 12px 20px;
 		margin: 8px 0;
@@ -435,7 +460,6 @@ Description: Styles used for screen media
 		border: 2px solid #01426a;
 		border-radius: 4px;
 		box-sizing: border-box;
-		font-family: 'Times New Roman', Times, serif;
 	}
 
 	p.hidden,
@@ -485,31 +509,6 @@ Description: Styles used for screen media
 	}
 
 	.registration-login-message {
-<<<<<<< HEAD
-	text-align: center;
-}
-
-input[type=submit] {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 14px 20px;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
-}
-
-.enabledSubmit {
-    color: white;
-    background-color: #01426a;
-    border: none;
-}
-
-.disabledSubmit {
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
-}
-=======
 		text-align: center;
 	}
 
@@ -518,7 +517,6 @@ input[type=submit] {
 		margin-left: 25%;
 		margin-right: 25%;
 		padding: 14px 20px;
-		font-family: 'Times New Roman', Times, serif;
 		margin-top: 20px;
 	}
 
@@ -549,14 +547,13 @@ input[type=submit] {
 			
 		}
 
-		input[type="text"], input[type="password"] {
+		input[type="text"], input[type="password"], textarea{
 			padding: 6px 10px;
 			margin: 5px 0;
 		}
 
 		input[type=submit] {
 			padding: 7px 10px;
-			font-family: 'Times New Roman', Times, serif;
 			font-size: 0.75em;
 		}
 
@@ -598,9 +595,45 @@ input[type=submit] {
 		background-color: white;
 		border: 2px solid #01426a;
 		color: #01426a;
-}
+	}
 
+	#create-post-form {
+		margin-bottom: 100px;
+		margin-top: 50px;
+	}
 
->>>>>>> 7764fef (Add logout functionality and style)
+	.submit-btn {
+		margin: 0 auto;
+		padding: 30px;
+		background-color: #01426a;
+		color: white;
+		border: none;
+		border-radius: 2px;
+	}
+
+	.submit-btn:hover {
+		background-color: white;
+		border: 2px solid #01426a;
+		color: #01426a;
+	}
+
+	#review-title-feedback,
+	#review-description-feedback {
+		margin-bottom: 10px;
+		margin-left: 0;
+		margin-right: 0;
+		font-size: 0.5em;
+		/* text-align: center; */
+	}
+
+	#review-page-description {
+		color: #01426a;
+		margin-bottom: 0;
+	}
+
+	#review-page-description-span {
+		font-style: italic;
+	}
+
 }
 

@@ -2,10 +2,10 @@ Vue.component('headercomponent',{
    template : `<header>
         	<h1>Minneapolis&ndash;St. Paul: The Twin Cities</h1>
             <nav class="main-nav">
-				<a href="index.html">Home</a> 
-				<a href="history.html">History</a> 
-				<a href="population.html">Population</a> 
-				<a href="tourism.html">Tourism</a>
+				<a href="index.php">Home</a> 
+				<a href="history.php">History</a> 
+				<a href="population.php">Population</a> 
+				<a href="tourism.php">Tourism</a>
 				<a href="review.php">Review</a>
 				<a href="login.php">Login</a>
 				<a href="logout.php">Logout</a>

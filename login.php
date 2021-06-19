@@ -35,6 +35,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Login Page</title>
+		<?php include 'favicons.php'; ?>
 		<meta content="Jeremy Krovitz" name="author" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
@@ -55,16 +56,9 @@
 				<div class="login">
 					<form class="add-top-margin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
 						method="POST">
-<<<<<<< HEAD
-						<h1>Login</h1>
-						<input type="text" name="username" placeholder="username" />
-						<input type="password" name="password" placeholder="password">
-						<p><?php echo $errors; ?></p>
-=======
 						<h2>Login</h2>
 						<input type="text" name="username" placeholder="username" />
 						<input type="password" name="password" placeholder="password">
->>>>>>> 7764fef (Add logout functionality and style)
 						<input type="submit" value="Submit">
 					</form>
 				</div>

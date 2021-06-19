@@ -18,11 +18,7 @@
 		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
-
-		<!-- <link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" /> -->
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script defer src="js/header.js"></script>
 	</head>
 
