@@ -44,19 +44,27 @@
 	</head>
 
 	<body>
-		<div id="header-container">
-			<headercomponent></headercomponent>
+		<div id="page_container">
+			<div id="content-wrap">
+				<div id="header-container">
+					<headercomponent></headercomponent>
+				</div>
+				<div class="login">
+					<form class="add-top-margin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"
+						method="POST">
+						<h1>Login</h1>
+						<input type="text" name="username" placeholder="username" />
+						<input type="password" name="password" placeholder="password">
+						<p><?php echo $errors; ?></p>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+				<p class="registration-login-message">Need to create an account? <a href="register.php">Register</a></p>
+			</div>
+			<div id="footer-container">
+				<footercomponent></footercomponent>
+			</div>
 		</div>
-		<div class="login">
-			<form class="add-top-margin" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-				<h1>Login</h1>
-				<input type="text" name="username" placeholder="username" />
-				<input type="password" name="password" placeholder="password">
-				<p><?php echo $errors; ?></p>
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-		<p class="registration-login-message">Need to create an account? <a href="register.php">Register</a></p>
 	</body>
 
 </html>

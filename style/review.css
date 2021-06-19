@@ -17,10 +17,6 @@ td {
 	padding: 10px;
 }
 
-.registration-login-message {
-	text-align: center;
-}
-
 .welcome-class {
 	color: #01426a;
 	text-align: center;
@@ -49,6 +45,3 @@ td {
 	justify-content: center;
 }
 
-.review-copyright-class {
-	text-align: center;
-}

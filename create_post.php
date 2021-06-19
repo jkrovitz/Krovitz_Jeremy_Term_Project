@@ -58,7 +58,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 		<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script> -->
 		<script src="js/header.js" defer></script>
-		<script src="js/create_post.js" defer></script>
 		<script src="js/script.js" defer></script>
 	</head>
 
@@ -72,15 +71,9 @@
 		</div>
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<p><?php echo $errors; ?></p>
-			<div id="v-model-textinput">
-				<input v-model="reviewTitle" type="text" name="title" placeholder="Title">
-				<p>{{reviewTitle}}</p>
-			</div>
-			<div id="v-model-textarea">
-				<textarea v-model="reviewDescription" rows="25" cols="50" name="desc"
-					placeholder="Post description"></textarea>
-				<p>{{ reviewDescription }}</p>
-			</div>
+			<input type="text" name="title" placeholder="Title">
+
+			<textarea rows="25" cols="50" name="desc" placeholder="Post description"></textarea>
 			<input type="submit" value="Submit" />
 		</form>
 		<div id="footer-container">

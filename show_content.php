@@ -47,7 +47,7 @@
 
 			$review_file = "show_content.json";
 			if(file_put_contents($review_file, json_encode($review_data)))
-			echo("file created");
+			echo "";
 			else echo ("failed");
 		?>
 		<p id="post-id"></p>

@@ -11,11 +11,16 @@ Description: Styles used for screen media
         font-family: "Arial", sans-serif;
     }
 
-    /* body {
+	   html, body {
         margin: 0;
         background-color: #d6eef8;
-    } */
-
+				width: 100%;
+				min-height: 100%;
+				position: relative;
+				
+				
+    }
+/* 
     footer {
         flex-grow: 0;
         flex-shrink: 0;
@@ -28,7 +33,7 @@ Description: Styles used for screen media
         left: 0;
         bottom: 0;
         width: 100%;
-    }
+    } */
 
     .flex-container {
         display: flex;
@@ -127,10 +132,32 @@ Description: Styles used for screen media
         }
     }
 
+	#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
     .copyright-class {
-        padding-top: 1em;
-        margin: 0 2em;
+        /* padding-top: 1em;
+        margin: 0;
 		text-align: center;
+		flex-shrink: 0;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		height: 2.5rem;     */
+		text-align: center;
+		position: relative;
+  bottom: 0;
+  padding-top: 1em;
+  width: 100%;
+  height: 2.5rem;    
+		background: #1c252e; 
+		margin: 0;
     }
 
     /* Styles used on history.html, index.html, and tourism.html for screen media */
@@ -412,4 +439,29 @@ Description: Styles used for screen media
 		justify-content: center;
 
 	}
+
+	.registration-login-message {
+	text-align: center;
+}
+
+input[type=submit] {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 14px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.enabledSubmit {
+    color: white;
+    background-color: #01426a;
+    border: none;
+}
+
+.disabledSubmit {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
 }

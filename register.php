@@ -53,39 +53,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta content="Register" name="title" />
 		<meta content="User can create an account, so they can post a review." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
+		<link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
 		<script src="js/header.js" defer></script>
 		<script src="js/register.js" defer></script>
 	</head>
 
 	<body class="flex-container">
-		<div id="header-container">
-			<headercomponent></headercomponent>
-		</div>
-		<form name="registrationForm" class="add-top-margin"
-			action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-			<div class="innerFormOutline">
-				<h1>Registration Page</h1>
-				<!-- <p><?php echo $errors; ?></p> -->
-				<input type="text" id="username" name="username" placeholder="username">
-				<p id="usernameFeedback" class="hidden">Username must have length between 5 and 20 characters. It can
-					may
-					only consist of alphanumeric characters, -, or _.</p>
-				<input type="text" id="email" name="email" placeholder="E-mail">
-				<p id="emailFeedback" class="hidden">Invalid email.</p>
-				<input type="password" id="password" name="password" placeholder="Password" autocomplete="on">
-				<p id="passwordFeedback" class="hidden">Password must contain one lowercase letter, one uppercase
-					letter, one digit, one special character, and is at least eight characters long.</p>
-				<input type="submit" value="Submit" id="submit" class="disabledSubmit">
+		<div id="page_container">
+			<div id="content-wrap">
+				<div id="header-container">
+					<headercomponent></headercomponent>
+				</div>
+				<form name="registrationForm" class="add-top-margin"
+					action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+					<div class="innerFormOutline">
+						<h1>Registration Page</h1>
+						<!-- <p><?php echo $errors; ?></p> -->
+						<input type="text" id="username" name="username" placeholder="username">
+						<p id="usernameFeedback" class="hidden">Username must have length between 5 and 20 characters.
+							It can
+							may
+							only consist of alphanumeric characters, -, or _.</p>
+						<input type="text" id="email" name="email" placeholder="E-mail">
+						<p id="emailFeedback" class="hidden">Invalid email.</p>
+						<input type="password" id="password" name="password" placeholder="Password" autocomplete="on">
+						<p id="passwordFeedback" class="hidden">Password must contain one lowercase letter, one
+							uppercase
+							letter, one digit, one special character, and is at least eight characters long.</p>
+						<input type="submit" value="Submit" id="submit" class="disabledSubmit">
+					</div>
+				</form>
+				<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
 			</div>
-		</form>
-		<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
+			<div id="footer-container">
+				<footercomponent></footercomponent>
+			</div>
+		</div>
 	</body>
 
 </html>

@@ -14,10 +14,14 @@
 		<meta charset="utf-8">
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<link href="style/screen.css" rel="preload" as="style" />
-		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
+		<link href="style/all-styles.css" rel="preload" as="style" />
+		<link href="style/all-styles.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
+
+
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
 		</script>
 		<script defer src="js/header.js"></script>
@@ -61,7 +65,7 @@
 		$file = "data.json";
 
 		if (file_put_contents($file, json_encode($postdata)))
-		echo("file created");
+			echo "";
 		else 
 		echo ("failed");
 		?>
