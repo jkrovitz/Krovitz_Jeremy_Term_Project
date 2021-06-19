@@ -1,7 +1,7 @@
 <?php 
 	session_start();
 	//Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
-	if(is_null($_SESSION["username"])) {
+	if(!isset($_SESSION["username"])) {
 		header("Location: login.php");
 	}
 ?>

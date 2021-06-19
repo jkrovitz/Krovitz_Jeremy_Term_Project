@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .review-table {
 	border-collapse: collapse;
 	width: 50%;
@@ -20,23 +24,7 @@ td {
 .welcome-class {
 	color: #01426a;
 	text-align: center;
-}
-
-.create-post-btn {
-	padding: 20px;
-	text-align: center;
-	background-color: #01426a;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-	width: 200px;
-	min-width: 180px;
-}
-
-.create-post-btn:hover {
-	background-color: white;
-	border: 2px solid #01426a;
-	color: #01426a;
+	margin: 50px 0 0 0;
 }
 
 .center-btn {
@@ -45,3 +33,35 @@ td {
 	justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
+
+
+    .copyright-class {
+        /* padding-top: 1em;
+        margin: 0;
+		text-align: center;
+		flex-shrink: 0;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		height: 2.5rem;     */
+		/* text-align: center;
+		position: relative;
+  bottom: 0;
+  padding-top: 1em;
+  width: 100%;
+  height: 2.5rem;    
+		background: #1c252e; 
+		margin: 0; */
+		position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   margin: 0;
+   background: #1c252e; 
+   padding: 1em;
+   text-align: center;
+
+    }
+>>>>>>> 7764fef (Add logout functionality and style)

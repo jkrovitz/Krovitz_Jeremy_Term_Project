@@ -144,6 +144,7 @@ Description: Styles used for screen media
     .copyright-class {
         /* padding-top: 1em;
         margin: 0;
+<<<<<<< HEAD
 		text-align: center;
 		flex-shrink: 0;
 		position: relative;
@@ -151,13 +152,36 @@ Description: Styles used for screen media
 		width: 100%;
 		height: 2.5rem;     */
 		text-align: center;
+=======
+		text-align: center;
+		flex-shrink: 0;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		height: 2.5rem;     */
+		/* text-align: center;
+>>>>>>> 7764fef (Add logout functionality and style)
 		position: relative;
   bottom: 0;
   padding-top: 1em;
   width: 100%;
   height: 2.5rem;    
 		background: #1c252e; 
+<<<<<<< HEAD
 		margin: 0;
+=======
+		margin: 0; */
+	
+		position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   margin: 0;
+   background: #1c252e; 
+   padding: 1em;
+   text-align: center;
+
+>>>>>>> 7764fef (Add logout functionality and style)
     }
 
     /* Styles used on history.html, index.html, and tourism.html for screen media */
@@ -356,6 +380,26 @@ Description: Styles used for screen media
         width: 338px;
     }
 
+	@media only screen and (max-width: 600px) {
+		#moa-image-1,
+		#moa-image-2 {
+			width: 169px;
+			height: 112.5px;
+			
+		}
+
+		.moa-image-caption {
+			width: 169px;
+
+		}
+
+		#moa-1-figure,
+		#moa-2-figure {
+			margin-left: 0;
+			margin-right: 0;
+		} 
+	}
+
     #walker-art-center-print-description {
         display: none;
     }
@@ -441,6 +485,7 @@ Description: Styles used for screen media
 	}
 
 	.registration-login-message {
+<<<<<<< HEAD
 	text-align: center;
 }
 
@@ -464,4 +509,98 @@ input[type=submit] {
     background-color: #cccccc;
     color: #666666;
 }
+=======
+		text-align: center;
+	}
+
+	input[type=submit] {
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding: 14px 20px;
+		font-family: 'Times New Roman', Times, serif;
+		margin-top: 20px;
+	}
+
+	.enabledSubmit {
+		color: white;
+		background-color: #01426a;
+		border: none;
+	}
+
+	.disabledSubmit {
+		border: 1px solid #999999;
+		background-color: #cccccc;
+		color: #666666;
+	}
+
+	@media only screen and (max-width: 600px) {
+		h2 {
+			/* font-size: 1em; */
+			text-align: center;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		form {
+			padding: 20px;
+			width: 60%;
+			display: table-cell;
+			text-align: center;
+			
+		}
+
+		input[type="text"], input[type="password"] {
+			padding: 6px 10px;
+			margin: 5px 0;
+		}
+
+		input[type=submit] {
+			padding: 7px 10px;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 0.75em;
+		}
+
+	.registration-login-message {
+		font-size: 0.70em;
+		margin: 0;
+		}
+
+		.add-margin {
+			padding: 50px;
+		}
+
+	}
+
+	@media only screen and (max-width: 300px) {
+		form {
+			width: 10%;
+			
+			
+		}
+
+	}
+
+
+
+	.create-post-btn {
+		padding: 20px;
+		text-align: center;
+		background-color: #01426a;
+		color: white;
+		text-decoration: none;
+		border-radius: 5px;
+		width: 200px;
+		min-width: 180px;
+		margin-top: 50px;
+	}
+
+	.create-post-btn:hover {
+		background-color: white;
+		border: 2px solid #01426a;
+		color: #01426a;
 }
+
+
+>>>>>>> 7764fef (Add logout functionality and style)
+}
+

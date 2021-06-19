@@ -12,23 +12,30 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Show review</title>
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/review.css" rel="preload" as="style" />
+		<link href="style/review.css" rel="stylesheet" type="text/css" />
+
+		<!-- <link href="style/all-style.css" rel="preload" as="style" />
+		<link href="style/all-style.css" rel="stylesheet" type="text/css" /> -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
 		</script>
 		<script defer src="js/header.js"></script>
 	</head>
 
 	<body>
-		<div id="header-container">
-			<headercomponent></headercomponent>
-		</div>
-		<a href="review.php">Go back to the forum</a>
+		<div id="page_container">
+			<div id="content-wrap">
+				<div id="header-container">
+					<headercomponent></headercomponent>
+				</div>
+				<a class="create-post-btn" href="review.php">Go back to the forum</a>
 
 
-		<?php 
+				<?php 
 			include '../../connection.php';
 
 		$id = $_GET['id'];
@@ -50,14 +57,16 @@
 			echo "";
 			else echo ("failed");
 		?>
-		<p id="post-id"></p>
-		<h1 id="post-title"></h1>
-		<h2 id="poster"></h2>
-		<p id="post-desc"></p>
+				<p id="post-id"></p>
+				<h1 id="post-title"></h1>
+				<h2 id="poster"></h2>
+				<p id="post-desc"></p>
 
-		<script defer src="js/show-content.js"></script>
-		<div id="footer-container">
-			<footercomponent></footercomponent>
+				<script defer src="js/show-content.js"></script>
+			</div>
+			<div id="footer-container">
+				<footercomponent></footercomponent>
+			</div>
 		</div>
 
 	</body>
