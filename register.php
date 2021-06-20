@@ -35,9 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$register_file = "register.json";
 				file_put_contents($register_file, $json_array);
 				// header("Location: login.php");
-				session_start();
-    $_SESSION['success_message'] = "User created successfully.";
-	header("Location register.php");
             } else {
                 echo "It's not working";
             }
@@ -80,13 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<headercomponent></headercomponent>
 				</div>
 				<div class="registration">
-					<?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
-					<div class="success-message">
-						<?php echo $_SESSION['success_message']; ?></div>
-					<?php
-                        unset($_SESSION['success_message']);
-                    }
-                    ?>
 					<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
 					<form name="registrationForm" class="registration-form"
 						action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
