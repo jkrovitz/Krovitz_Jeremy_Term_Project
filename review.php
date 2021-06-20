@@ -49,7 +49,7 @@
 		<table class="review-table">
 			<?php
 					
-	
+	 	$postdata = [];
 		while($data = mysqli_fetch_assoc($query)) {
 		$url = "show_content.php?id=".$data["post_id"];
 	

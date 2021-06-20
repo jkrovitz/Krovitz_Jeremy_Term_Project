@@ -3,27 +3,43 @@ var url = "show_content.json";
 
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
-    var myArr = JSON.parse(this.responseText);
-    myFunction(myArr);
+    var contentObj = JSON.parse(this.responseText);
+   createReviewDetailsTable(contentObj);
     }
 };
 
-function myFunction(arr) {
-  var out = "";
-	var i;
-	console.log(arr);
-	// for (const i of arr) {
-		
-	// 	console.log(i);
-	// }
+function createReviewDetailsTable(obj) {
 
-	document.getElementById("post-title").textContent = arr["post_title"];
-        document.getElementById("poster").textContent = arr["poster"];
-	document.getElementById("post-desc").textContent = arr["post_desc"];
+	const reviewDetailsTable = document.getElementById('review-details-table');
+	const reviewDetailsCaption = document.createElement('caption');
+	const reviewDetailsCaptionText = document.createTextNode('Review Details');
+	const captionIdAttribute = document.createAttribute('id');
+	captionIdAttribute.value = 'review-details-caption';
+	reviewDetailsCaption.setAttributeNode(captionIdAttribute);
+	reviewDetailsCaption.appendChild(reviewDetailsCaptionText);
+	reviewDetailsTable.appendChild(reviewDetailsCaption);
 
+
+	for (const [key, value] of Object.entries(obj)) {
+		const tr = document.createElement('tr');
+		console.log(tr);
+		const th = document.createElement('th');
+		const att = document.createAttribute('scope');
+		att.value = 'row';
+		th.setAttributeNode(att);
+		const td = document.createElement('td');
+		const thTextContent = document.createTextNode(key);
+		const tdTextContent = document.createTextNode(value);
+		th.appendChild(thTextContent);
+		td.appendChild(tdTextContent);
+		tr.appendChild(th);
+		tr.appendChild(td);
+		reviewDetailsTable.appendChild(tr);
+	}
 }
 
 
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+

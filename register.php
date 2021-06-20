@@ -34,6 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$json_array = json_encode($array_to_convert);
 				$register_file = "register.json";
 				file_put_contents($register_file, $json_array);
+				// header("Location: login.php");
+				session_start();
+    $_SESSION['success_message'] = "User created successfully.";
+	header("Location register.php");
             } else {
                 echo "It's not working";
             }
@@ -76,11 +80,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<headercomponent></headercomponent>
 				</div>
 				<div class="registration">
+					<?php if (isset($_SESSION['success_message']) && !empty($_SESSION['success_message'])) { ?>
+					<div class="success-message">
+						<?php echo $_SESSION['success_message']; ?></div>
+					<?php
+                        unset($_SESSION['success_message']);
+                    }
+                    ?>
 					<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
 					<form name="registrationForm" class="registration-form"
 						action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 						<h2 class="review-text">Register</h2>
-						<!-- <p><?php echo $errors; ?></p> -->
+						<p><?php echo $errors; ?></p>
 						<input type="text" id="username-register-page" name="username" placeholder="username">
 						<p id="username-feedback-register-page" class="hidden">Username must have length between 5 and
 							20

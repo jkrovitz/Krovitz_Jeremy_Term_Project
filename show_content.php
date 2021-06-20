@@ -12,6 +12,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Show review</title>
+		<?php include 'favicons.php'; ?>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/screen.css" rel="preload" as="style" />
@@ -20,6 +21,7 @@
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script defer src="js/header.js"></script>
+		<script defer src="js/show-content.js"></script>
 	</head>
 
 	<body>
@@ -31,7 +33,7 @@
 				<div class="logout-btn-div">
 					<a class="logout-btn" href="logout.php">Logout</a>
 				</div>
-				<a class="create-post-btn" href="review.php">Go back to the forum</a>
+				<a class="create-post-btn" href="review.php">Go back to all reviews</a>
 
 
 				<?php 
@@ -44,7 +46,7 @@
 				header("Location: review.php");
 			}
 			
-			$query = mysqli_query($conn, "SELECT post_id, poster, post_title, post_desc FROM posting WHERE  post_id='$id';");
+			$query = mysqli_query($conn, "SELECT post_id, post_title, poster, post_desc FROM posting WHERE  post_id='$id';");
 			$review_data = mysqli_fetch_assoc($query);
 
 			if(is_null($review_data["post_id"])) {
@@ -56,17 +58,13 @@
 			echo "";
 			else echo ("failed");
 		?>
-				<p id="post-id"></p>
-				<h1 id="post-title"></h1>
-				<h2 id="poster"></h2>
-				<p id="post-desc"></p>
 
-				<script defer src="js/show-content.js"></script>
+				<table id="review-details-table"></table>
+
+				<div id="footer-container">
+					<footercomponent></footercomponent>
+				</div>
 			</div>
-			<div id="footer-container">
-				<footercomponent></footercomponent>
-			</div>
-		</div>
 
 	</body>
 
