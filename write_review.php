@@ -15,14 +15,25 @@
 		$post_title = htmlspecialchars($_POST["title"]);
 		$post_desc = htmlspecialchars($_POST["desc"]);
 
-		$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
-
-		if ($query) {
-			header("Location: review.php");
+		if (empty($post_title) or empty($post_desc)) {
+			$errors = "Invalid inputs";
 		} else {
-			echo "It did not work";
+			//make sure post titles are not the same.
+			$query = mysqli_query($conn, "SELECT post_title FROM posting WHERE post_title='$post_title';");
+			$data = mysqli_fetch_assoc($query);
+			if(!is_null($data["post_title"])) {
+				$errors = "Post name already exists!";
+			} else {
+				$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
+
+				if ($query) {
+					header("Location: review.php");
+				} else {
+					echo "It did not work";
+				}
+			}
 		}
-}
+	}
 
 ?>
 
@@ -41,8 +52,8 @@
 		<?php include 'favicons.php'; ?>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -53,6 +64,9 @@
 	<body class="flex-container">
 		<div id="header-container">
 			<headercomponent></headercomponent>
+		</div>
+		<div class="logout-btn-div">
+			<a class="logout-btn" href="logout.php">Logout</a>
 		</div>
 		<h2 class="welcome-class">Write a review</h2>
 		<div class="center-btn">
@@ -65,7 +79,7 @@
 			<textarea id="review-description" rows="25" cols="50" name="desc"
 				placeholder="Review description"></textarea>
 			<p id="review-description-feedback" class="hidden">Review description must be longer than 5 characters.</p>
-			<input type="submit" id="submit-btn-id" value="Submit" id="submit" class="disabledSubmit">
+			<input type="submit" id="submit-btn-id" value="Submit" id="submit" class="disabled-submit">
 		</form>
 		<div id="footer-container">
 			<footercomponent></footercomponent>

@@ -10,8 +10,8 @@
 		<meta content="Lists some demographics of Minneapolis and St. Paul." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
 		<?php include 'favicons.php'; ?>
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -23,7 +23,9 @@
 			<headercomponent></headercomponent>
 		</div>
 		<main class="main-class">
-			<p>Because there are multiple definitions of what is considered to be part of the Twin Cities, the
+			<p class="some-padding information-text">Because there are multiple definitions of what is considered to be
+				part of the
+				Twin Cities, the
 				population values would be more subjective. Therefore, the populations of Minneapolis and St. Paul are
 				described separately.</p>
 			<figure id="mn-metro-map-figure">
@@ -37,7 +39,7 @@
 				</figcaption>
 			</figure>
 			<div id="minneapolis-population">
-				<h2>
+				<h2 class="population-heading">
 					Minneapolis Population 2019
 					<sup class="header-superscript-text">
 						<a href="#population-source1">[1]</a>
@@ -133,7 +135,7 @@
 				</tbody>
 			</table>
 			<div id="saint-paul-population">
-				<h2>
+				<h2 class="population-heading">
 					St. Paul Population 2019
 					<sup class="header-superscript-text">
 						<a href="#population-source2">[2]</a>

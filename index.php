@@ -10,8 +10,8 @@
 		<meta content="Provides a brief overview of the Twin Cities." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
 		<?php include 'favicons.php'; ?>
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer>

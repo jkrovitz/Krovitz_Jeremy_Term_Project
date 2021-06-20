@@ -7,8 +7,6 @@ Vue.component('headercomponent',{
 				<a href="population.php">Population</a> 
 				<a href="tourism.php">Tourism</a>
 				<a href="review.php">Review</a>
-				<a href="login.php">Login</a>
-				<a href="logout.php">Logout</a>
 				<button class="hamburger-menu-icon">&#9776;</button>
 		</nav>
         </header>`

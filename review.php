@@ -15,11 +15,10 @@
 		<?php include 'favicons.php'; ?>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
-
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script defer src="js/header.js"></script>
 		<script defer src="js/review.js"></script>
@@ -29,13 +28,14 @@
 		<div id="header-container">
 			<headercomponent></headercomponent>
 		</div>
+		<div class="logout-btn-div">
+			<a class="logout-btn" href="logout.php">Logout</a>
+		</div>
 		<h2 id="welcome-id-review" class="welcome-class">Welcome <?php echo $_SESSION["username"] ?>!</h2>
-		<p id="review-page-description">Click <span id="review-page-description-span">Write a review about the Twin
-				Cities</span> to write a review or click on an
-			existing review to see its
-			description.</p>
+		<p id="review-page-description">Click <span id="review-page-description-span">Write a review</span> or select an
+			existing review to read.</p>
 		<div class="center-btn">
-			<a class="create-post-btn" href="write_review.php">Write a review about the Twin Cities</a>
+			<a class="create-post-btn" href="write_review.php">Write a review</a>
 		</div>
 		<?php
 			include '../../connection.php';

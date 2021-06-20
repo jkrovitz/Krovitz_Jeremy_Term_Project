@@ -4,12 +4,7 @@ Author: Jeremy Krovitz
 Description: Styles used for screen media
 */
 
-/* Styles used across all html pages for screen media */
 @media screen {
-    * {
-        box-sizing: border-box;
-        font-family: "Arial", sans-serif;
-    }
 
 	   html, body {
         margin: 0;
@@ -21,23 +16,7 @@ Description: Styles used for screen media
 				overflow-x: hidden;
 				
 				
-    }
-
-	
-/* 
-    footer {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: auto;
-        color: #fff;
-        background: #1c252e;
-    }
-
-    footer {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-    } */
+	   }
 
     .flex-container {
         display: flex;
@@ -117,10 +96,65 @@ Description: Styles used for screen media
         color: #01426a !important;
     }
 
+
+
+ul.citations {
+    list-style-type: none;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin: 2em auto;
+}
+
+td,
+th {
+    padding: 8px;
+    width: 33.33%;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+
+        h1 {
+            font-size: 2.00em;
+        }
+
+        h2 {
+            font-size: 1.50em;
+        }
+
+        h3 {
+            font-size: 1.17em;
+        }
+		p, td, th, li, a {
+			font-size: 1.00em;
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+
+		table caption {
+			font-size: 1.14em;
+		}
+
     h2,
     h3 {
-        margin-left: 2rem;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-left: 0;
+		margin-right: 0;
+		color: #01426a;
     }
+
+	h2.review-text {
+		text-align: center;
+	}
 
 	table caption {
 		font-size: 1.5em;
@@ -130,6 +164,15 @@ Description: Styles used for screen media
         margin-bottom: 5px;
         color: #01426a;
 }
+
+	#history-header,
+	#tourism-header {
+		margin-top: 2em;
+	}
+
+	#tourism-header {
+		margin-bottom: 1em;
+	}
 
 
     @media screen and (max-width: 600px) {
@@ -144,12 +187,12 @@ Description: Styles used for screen media
         h3 {
             font-size: 0.98em;
         }
-		p, td, th, li, a{
+		p, td, th, li, a {
 			font-size: 0.8em;
 		}
 
 		table caption {
-			font-size: 0.9.5em;
+			font-size: 0.95em;
 		}
 
 
@@ -162,27 +205,10 @@ Description: Styles used for screen media
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;    
 }
 
     .copyright-class {
-        /* padding-top: 1em;
-        margin: 0;
-		text-align: center;
-		flex-shrink: 0;
-		position: relative;
-		bottom: 0;
-		width: 100%;
-		height: 2.5rem;     */
-		/* text-align: center;
-		position: relative;
-  bottom: 0;
-  padding-top: 1em;
-  width: 100%;
-  height: 2.5rem;    
-		background: #1c252e; 
-		margin: 0; */
-	
 		position: relative;
    left: 0;
    bottom: 0;
@@ -194,7 +220,7 @@ Description: Styles used for screen media
 
     }
 
-    /* Styles used on history.html, index.html, and tourism.html for screen media */
+
     .image-row {
         text-align: center;
     }
@@ -218,13 +244,19 @@ Description: Styles used for screen media
         }
     }
 
-    /* Style used on history.html, population.html, and tourism.html for screen media */
     p {
-        margin-left: 2rem;
         color: #000;
     }
 
-    /* Styles used on index.html and tourism.html for screen media */
+	.information-text {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+
+	.some-padding {
+		padding: 30px 0 30px 0;
+	}
+
     video {
         max-width: 100%;
         min-width: 100%;
@@ -384,6 +416,30 @@ Description: Styles used for screen media
         list-style-position: inside;
     }
 
+	@media only screen and (max-width: 600px) {
+		#minneapolis-population,
+		#saint-paul-population {
+			background: #fff;
+			border: 2px inset #01426a;
+			display: inline-block;
+			width: 70%;
+			margin-left: 15%;
+			margin-right: 15%;
+			margin-top: 30px;
+			text-align: center;
+			padding-bottom: 10px;
+		}
+
+		#minneapolis-population > ul > li,
+		#saint-paul-population >  ul > li {
+			padding: 3px;
+		}
+
+		.population-heading {
+			margin-top: 10px;
+		}
+	}
+
     /* Styles used on tourism.html for screen media */
     #moa-section,
     #sculpture-garden-section,
@@ -438,18 +494,13 @@ Description: Styles used for screen media
     }
 
 	form {
-		border-radius: 10px;
+		border-radius: 3px;
 		padding: 50px;
 		background-color: #f2f2f2;
 		border: 2px solid #01426a;
-		width: 90%;
+		/* width: 90%; */
 		margin: 0 auto;
 		color: #01426a;
-	}	
-
-	.innerFormOutline {
-		border: 4px solid #01426a;
-		padding: 30px;
 	}
 
 	input[type="text"], input[type="password"], textarea {
@@ -467,9 +518,9 @@ Description: Styles used for screen media
 		display: none;
 	}
 
-	#usernameFeedback,
-	#emailFeedback,
-	#passwordFeedback {
+	#username-feedback,
+	#email-feedback,
+	#password-feedback {
 		width: 60%;
 		padding: 8px 12px;
 		border-radius: 4px;
@@ -484,16 +535,25 @@ Description: Styles used for screen media
 		border-color: #f5c2c7;
 	}
 
-	.login {
+	.login,
+	.registration {
 		position: relative;
-		margin: 30px auto;
-		padding: 20px 20px 20px;
+		margin: 0 auto;
+		padding: 20px 20px 20px 20px;
 		width: 500px;
 		border-radius: 3px;
 	}
 
-	.add-top-margin {
-		margin-top: 50px;
+
+	.registration-form {	
+		margin-top: 30px;
+		margin-bottom: 80px;
+		border: 4px solid #01426a;
+		padding: 30px;
+	}
+
+	.login-form {
+		margin-bottom: 80px;
 	}
 
 	.welcome-class{
@@ -510,6 +570,18 @@ Description: Styles used for screen media
 
 	.registration-login-message {
 		text-align: center;
+		
+		margin: 50px 0 0 0;
+	}
+
+	.message-on-login-page,
+	.need-to-create-an-account {
+		text-align: center;
+	}
+
+	.message-on-login-page {
+		margin-top: 80px;
+		margin-bottom: 10px;
 	}
 
 	input[type=submit] {
@@ -520,21 +592,22 @@ Description: Styles used for screen media
 		margin-top: 20px;
 	}
 
-	.enabledSubmit {
+	.enabled-submit {
 		color: white;
 		background-color: #01426a;
 		border: none;
+		cursor: pointer;
 	}
 
-	.disabledSubmit {
+	.disabled-submit {
 		border: 1px solid #999999;
 		background-color: #cccccc;
 		color: #666666;
+		cursor: not-allowed;
 	}
 
 	@media only screen and (max-width: 600px) {
-		h2 {
-			/* font-size: 1em; */
+		h2.review-text {
 			text-align: center;
 			margin-left: 0;
 			margin-right: 0;
@@ -557,27 +630,13 @@ Description: Styles used for screen media
 			font-size: 0.75em;
 		}
 
-	.registration-login-message {
-		font-size: 0.70em;
-		margin: 0;
-		}
-
-		.add-margin {
-			padding: 50px;
-		}
-
 	}
 
 	@media only screen and (max-width: 300px) {
 		form {
-			width: 10%;
-			
-			
+			width: 10%;	
 		}
-
 	}
-
-
 
 	.create-post-btn {
 		padding: 20px;
@@ -602,7 +661,9 @@ Description: Styles used for screen media
 		margin-top: 50px;
 	}
 
-	.submit-btn {
+	.submit-btn,
+	.submit-btn:link,
+	.submit-btn:visited {
 		margin: 0 auto;
 		padding: 30px;
 		background-color: #01426a;
@@ -611,7 +672,9 @@ Description: Styles used for screen media
 		border-radius: 2px;
 	}
 
-	.submit-btn:hover {
+	.submit-btn:hover,
+	.submit-btn:focus,
+	.submit-btn:active {
 		background-color: white;
 		border: 2px solid #01426a;
 		color: #01426a;
@@ -623,17 +686,41 @@ Description: Styles used for screen media
 		margin-left: 0;
 		margin-right: 0;
 		font-size: 0.5em;
-		/* text-align: center; */
 	}
 
 	#review-page-description {
-		color: #01426a;
+		color: #000;
 		margin-bottom: 0;
+		text-align: center;
 	}
 
 	#review-page-description-span {
 		font-style: italic;
 	}
 
-}
+	.logout-btn-div {
+		display: flex;
+		justify-content: flex-end;
+	}
 
+	.logout-btn,
+	.logout-btn:link,
+	.logout-btn:visited {
+		padding: 10px 20px;
+		background-color: #01426a;
+		color: white;
+		border: none;
+		border-radius: 8px;
+		text-decoration: none;
+		margin: 20px 20px 0 0;
+	}
+
+	.logout-btn:hover,
+	.logout-btn:focus,
+	.logout-btn:active {
+		color: #01426a;
+		background-color: white;
+		border: 4px solid #01426a;
+		font-weight: 800;
+	}
+}

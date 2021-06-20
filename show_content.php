@@ -14,8 +14,8 @@
 		<title>Show review</title>
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -27,6 +27,9 @@
 			<div id="content-wrap">
 				<div id="header-container">
 					<headercomponent></headercomponent>
+				</div>
+				<div class="logout-btn-div">
+					<a class="logout-btn" href="logout.php">Logout</a>
 				</div>
 				<a class="create-post-btn" href="review.php">Go back to the forum</a>
 

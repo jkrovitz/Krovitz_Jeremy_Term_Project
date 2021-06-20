@@ -10,8 +10,8 @@
 		<meta content="Some activities to do in the Twin Cities are mentioned." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
 		<?php include 'favicons.php'; ?>
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -23,25 +23,18 @@
 			<headercomponent></headercomponent>
 		</div>
 		<main class="main-class">
-			<h2>
+			<h2 id="tourism-header" class="information-text">
 				Some Things to do in the Twin Cities
 			</h2>
 			<section id="moa-section">
-				<h3>
+				<h3 class="information-text">
 					Mall of America
 				</h3>
-				<p id="moa-screen-description">
+				<p class="information-text" id="moa-screen-description">
 					With over 500 stores, 50 restaurants, and a theme park, the
 					<a href="https://www.mallofamerica.com/" target="_blank">Mall of America</a>, the largest shopping
 					mall in the United States, is a great place to spend the day.
 					<sup><a href="#tourism-source1">[1]</a></sup>
-				</p>
-				<p id="moa-print-description">
-					With over 500 stores, 50 restaurants, and a theme park, the Mall of America, the largest shopping
-					mall in the United States, is a great place to spend the day.
-					<sup><a href="#tourism-source1">[1]</a></sup>
-					Visit <a href="https://www.mallofamerica.com/" target="_blank">mallofamerica.com</a> for more
-					information.
 				</p>
 				<div class="image-row">
 					<div class="image-column">
@@ -69,16 +62,12 @@
 				</div>
 			</section>
 			<section id="sculpture-garden-section">
-				<h3>
+				<h3 class="information-text">
 					Minneapolis Sculpture Garden
 				</h3>
-				<p id="walker-art-center-screen-description">Art lover? Come visit the <a href="https://walkerart.org/"
-						target="_blank">Walker Art Center</a> and enjoy a nice walk around the Sculpture Garden.</p>
-
-				<p id="walker-art-center-print-description">
-					Art lover? Come visit the Walker Art Center and enjoy a nice walk around the Sculpture Garden. Visit
-					<a href="https://walkerart.org/" target="_blank">https://walkerart.org/</a> for more details.
-				</p>
+				<p class="information-text" id="walker-art-center-screen-description">Art lover? Come visit the <a
+						href="https://walkerart.org/" target="_blank">Walker Art Center</a> and enjoy a nice walk around
+					the Sculpture Garden.</p>
 
 				<figure class="spoonbridge-and-cherry">
 					<!-- Alt text is left blank because a caption has been added to the image. -->
@@ -91,20 +80,14 @@
 				</figure>
 			</section>
 			<section id="guthrie-theater-section">
-				<h3>
+				<h3 class="information-text">
 					The Guthrie Theater
 				</h3>
-				<p id="guthrie-theater-screen-description">
+				<p class="information-text" id="guthrie-theater-screen-description">
 					Want to see a play? Go to the Guthrie, one of the most renowned theaters in the country. Visit the
 					<a href="https://www.guthrietheater.org/" target="_blank" title="Guthrie Theater Website">Guthrie
 						Theater website</a> for
 					show times.
-				</p>
-				<p id="guthrie-theater-print-description">
-					Want to see a play? Go to the Guthrie, one of the most renowned theaters in the country. Visit <a
-						href="https://www.guthrietheater.org/" target="_blank"
-						title="Guthrie Theater Website">guthrietheater.org</a> for show
-					times.
 				</p>
 				<div class="video-class">
 					<figure>

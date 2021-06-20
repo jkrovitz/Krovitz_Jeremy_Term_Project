@@ -12,12 +12,12 @@
 			let reviewDescriptionValid = validateText(REVIEW_DESCRIPTION.value, document.getElementsByTagName('p')[1]);
 			 if ((reviewTitleValid === true) && (reviewDescriptionValid === true)) {
                 SUBMIT.disabled = false;
-                SUBMIT.removeAttribute('class', 'disabledSubmit');
-                SUBMIT.setAttribute('class', 'enabledSubmit');
+                SUBMIT.removeAttribute('class', 'disabled-submit');
+                SUBMIT.setAttribute('class', 'enabled-submit');
             } else {
                 SUBMIT.disabled = true;
-                SUBMIT.setAttribute('class', 'disabledSubmit');
-                SUBMIT.removeAttribute('class', 'enabledSubmit');
+                SUBMIT.setAttribute('class', 'disabled-submit');
+                SUBMIT.removeAttribute('class', 'enabled-submit');
             }
 		}, false);
 	});

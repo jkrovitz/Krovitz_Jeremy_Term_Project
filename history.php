@@ -11,8 +11,8 @@
 			name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
 		<?php include 'favicons.php'; ?>
-		<link href="style/all-style.css" rel="preload" as="style" />
-		<link href="style/all-style.css" rel="stylesheet" type="text/css" />
+		<link href="style/screen.css" rel="preload" as="style" />
+		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -24,8 +24,8 @@
 			<headercomponent></headercomponent>
 		</div>
 		<main class="main-class">
-			<h2>History</h2>
-			<p>
+			<h2 id="history-header" class="information-text">History</h2>
+			<p class="information-text">
 				Minneapolis&ndash;St. Paul is a large metropolitan area separated by the Mississippi River. Founded
 				first, Minneapolis was established by immigrants coming from Denmark, northern Germany, Norway, and
 				Sweden in 1855. Setting
@@ -75,7 +75,7 @@
 					</figure>
 				</div>
 			</div>
-			<p>
+			<p class="information-text">
 				In the early 1900s, the city of Minneapolis continued industrializing with flour mills. Food processing
 				plants were introduced and are still popular today. Also the Hennepin Island Hydroelectric Plant,
 				created in 1906, now
