@@ -1,6 +1,5 @@
 (function () {
 	'use strict';
-
 	document.loginForm.noValidate = true;
 	const USERNAME_LOGIN_PAGE = document.getElementById('username-login-page');
 	const PASSWORD_LOGIN_PAGE = document.getElementById('password-login-page');

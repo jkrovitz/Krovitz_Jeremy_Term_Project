@@ -1,4 +1,4 @@
-(function () {
+(function() {
 	'use strict';
 	document.createReviewForm.noValidate = true;
 	const MIN_LENGTH_TITLE = 5;
@@ -9,14 +9,10 @@
 	const REVIEW_DESCRIPTION = document.getElementById('review-description');
 	const SUBMIT = document.getElementById('submit-btn-id');
 	SUBMIT.disabled = true;
-
 	[REVIEW_TITLE, REVIEW_DESCRIPTION].forEach(item => {
-		item.addEventListener('input', function () {
+		item.addEventListener('input', function() {
 			let reviewTitleValid = validateTitle(REVIEW_TITLE.value, document.getElementsByTagName('p')[0]);
-			console.log(reviewTitleValid);
 			let reviewDescriptionValid = validateDescription(REVIEW_DESCRIPTION.value, document.getElementsByTagName('p')[1]);
-			
-			console.log(reviewDescriptionValid);
 			if ((reviewTitleValid === true) && (reviewDescriptionValid === true)) {
 				SUBMIT.disabled = false;
 				SUBMIT.removeAttribute('class', 'disabled-submit');
@@ -35,24 +31,21 @@
 			textFeedback.classList.remove('hidden');
 			textValid = false;
 		} else {
-		textFeedback.setAttribute('class', 'hidden');
-		textValid = true;
+			textFeedback.setAttribute('class', 'hidden');
+			textValid = true;
 		}
 		return textValid;
 	}
 
-		function validateDescription(textValue, textFeedback) {
+	function validateDescription(textValue, textFeedback) {
 		let textValid;
 		if ((textValue.length < MIN_LNEGTH_DESCRIPTION) || (textValue.length > MAX_LENGTH_DESCRIPTION)) {
 			textFeedback.classList.remove('hidden');
 			textValid = false;
 		} else {
-		textFeedback.setAttribute('class', 'hidden');
-		textValid = true;
+			textFeedback.setAttribute('class', 'hidden');
+			textValid = true;
 		}
 		return textValid;
 	}
-
-	
-	
 }());

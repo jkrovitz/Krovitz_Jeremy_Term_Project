@@ -27,7 +27,8 @@
 				part of the
 				Twin Cities, the
 				population values would be more subjective. Therefore, the populations of Minneapolis and St. Paul are
-				described separately.</p>
+				described separately.
+			</p>
 			<figure id="mn-metro-map-figure">
 				<!-- Alt text is left blank because a caption has been added to the image. -->
 				<img alt="" src="images/twin-cities-metro-map.png" id="mn-metro-map-img" title="The Twin Cities" />

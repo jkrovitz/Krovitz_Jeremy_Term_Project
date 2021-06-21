@@ -31,7 +31,6 @@ function validatePassword(passwordValue, passwordFeedback) {
 		lower = /[a-z]/,
 		number = /[0-9]/,
 		special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
-
 	if (minMaxLength.test(passwordValue) &&
 		upper.test(passwordValue) &&
 		lower.test(passwordValue) &&
@@ -45,6 +44,5 @@ function validatePassword(passwordValue, passwordFeedback) {
 		passwordValid = false;
 
 	}
-
 	return passwordValid;
 }

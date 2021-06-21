@@ -1,78 +1,60 @@
-/*
-File: screen.css
-Author: Jeremy Krovitz
-Description: Styles used for screen media
-*/
-
 @media screen {
-
-	   html, body {
+    html,
+    body {
         margin: 0;
         background-color: #d6eef8;
-				width: 100%;
-				min-height: 100%;
-				position: relative;
-
-				overflow-x: hidden;
-				
-				
-	   }
-
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        overflow-x: hidden;
+    }
     .flex-container {
         display: flex;
         flex-direction: column;
     }
-
     sup {
         top: -0.5em;
     }
-
     ul.citations {
-		background: #1c252e;
+        background: #1c252e;
         line-height: 1.6;
         font-size: 0.75em;
-		margin-bottom: 0;
-		color: #fff;
-		padding: 20px;
-		border-bottom: 1px solid #ddd;
-		word-wrap: break-word;
+        margin-bottom: 0;
+        color: #fff;
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        word-wrap: break-word;
     }
-
     footer p,
     footer,
-	ul.citations a {
+    ul.citations a {
         color: #fff;
     }
-
     main {
         background-color: #d6eef8;
     }
-
-	a {
-		text-decoration: underline;
+    a {
+        text-decoration: underline;
         text-underline-position: under;
-	}
-
+    }
     main a :not(.citations),
     main a:link :not(.citations),
     main a:visited :not(.citations),
-	sup a,
-	sup a:link,
-	sup a:visited {
+    sup a,
+    sup a:link,
+    sup a:visited {
         color: #0000ff;
     }
-
     main a:hover :not(.citations),
     main a:focus :not(.citations),
     main a:active :not(.citations),
-	sup a:hover,
-	sup a:focus, 
-	sup a:active {
+    sup a:hover,
+    sup a:focus,
+    sup a:active {
         padding: 2px;
         border: solid 1px #0000ff;
         background-color: #fff;
     }
-
     figure {
         display: inline-block;
         background: #fff;
@@ -82,11 +64,9 @@ Description: Styles used for screen media
         position: relative;
         font-size: 0.75em;
     }
-
-    figure > img {
+    figure>img {
         width: 100%;
     }
-
     figcaption a:hover,
     figcaption a:focus,
     figcaption a:active {
@@ -95,197 +75,163 @@ Description: Styles used for screen media
         background-color: #fff;
         color: #01426a !important;
     }
-
-
-
-ul.citations {
-    list-style-type: none;
-    text-align: left;
-}
-
-table {
-    border-collapse: collapse;
-    width: 75%;
-    margin: 2em auto;
-}
-
-td,
-th {
-    padding: 8px;
-    width: 33.33%;
-}
-
-th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-}
-
-
-        h1 {
-            font-size: 2.00em;
-        }
-
-        h2 {
-            font-size: 1.50em;
-        }
-
-        h3 {
-            font-size: 1.17em;
-        }
-		p, td, th, li, a {
-			font-size: 1.00em;
-			/* margin-block-start: 0;
+    ul.citations {
+        list-style-type: none;
+        text-align: left;
+    }
+    table {
+        border-collapse: collapse;
+        width: 75%;
+        margin: 2em auto;
+    }
+    td,
+    th {
+        padding: 8px;
+        width: 33.33%;
+    }
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.00em;
+    }
+    h2 {
+        font-size: 1.50em;
+    }
+    h3 {
+        font-size: 1.17em;
+    }
+    p,
+    td,
+    th,
+    li,
+    a {
+        font-size: 1.00em;
+        /* margin-block-start: 0;
 			margin-block-end: 0; */
-		}
-
-		table caption {
-			font-size: 1.14em;
-		}
-
+    }
+    table caption {
+        font-size: 1.14em;
+    }
     h2,
     h3 {
-		/* margin-block-start: 0;
+        /* margin-block-start: 0;
 		margin-block-end: 0; */
-		margin-left: 0;
-		margin-right: 0;
-		color: #01426a;
+        margin-left: 0;
+        margin-right: 0;
+        color: #01426a;
     }
-
-	h2.review-text {
-		text-align: center;
-	}
-
-	table caption {
-		font-size: 1.5em;
-		display: table-caption;
-		text-align: center;
+    h2.review-text {
+        text-align: center;
+    }
+    table caption {
+        font-size: 1.5em;
+        display: table-caption;
+        text-align: center;
         font-style: italic;
         margin-bottom: 5px;
         color: #01426a;
-}
-
-	#history-header,
-	#tourism-header {
-		margin-top: 2em;
-	}
-
-	#tourism-header {
-		margin-bottom: 1em;
-	}
-
-
+    }
+    #history-header,
+    #tourism-header {
+        margin-top: 2em;
+    }
+    #tourism-header {
+        margin-bottom: 1em;
+    }
     @media screen and (max-width: 600px) {
         h1 {
             font-size: 1.2em;
         }
-
         h2 {
             font-size: 1.00em;
         }
-
         h3 {
             font-size: 0.98em;
         }
-		p, td, th, li, a {
-			font-size: 0.8em;
-		}
-
-		table caption {
-			font-size: 0.95em;
-		}
-
-
-
+        p,
+        td,
+        th,
+        li,
+        a {
+            font-size: 0.8em;
+        }
+        table caption {
+            font-size: 0.95em;
+        }
     }
-
-	#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    
-}
-
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+    #content-wrap {
+        padding-bottom: 2.5rem;
+    }
     .copyright-class {
-		position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   margin: 0;
-   background: #1c252e; 
-   padding: 1em;
-   text-align: center;
-
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        background: #1c252e;
+        padding: 1em;
+        text-align: center;
     }
-
-
     .image-row {
         text-align: center;
     }
-
     .image-row:after {
         content: "";
         display: table;
         clear: both;
     }
-
     .image-column {
         float: left;
         width: 50%;
         padding: 5px;
         text-align: center;
     }
-
     @media screen and (max-width: 775px) {
         .image-column {
             width: 98%;
         }
     }
-
     p {
         color: #000;
     }
-
-	.information-text {
-		margin-left: 2rem;
-		margin-right: 2rem;
-	}
-
-	.some-padding {
-		padding: 30px 0 30px 0;
-	}
-
+    .information-text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .some-padding {
+        padding: 30px 0 30px 0;
+    }
     video {
         max-width: 100%;
         min-width: 100%;
         height: auto;
     }
-
-    video + figcaption {
+    video+figcaption {
         padding-left: 2em;
     }
-
-    video + figcaption,
-    video + figcaption a {
+    video+figcaption,
+    video+figcaption a {
         background-color: #2367d3;
         color: #fff !important;
     }
-
     .video-class {
         width: 70%;
         display: inline-block;
         margin-left: 15%;
         margin-right: 15%;
     }
-
     .video-class video {
         max-width: 100%;
         height: auto;
         display: block;
     }
-
     /* Styles used on history.html and tourism.html for screen media */
     .mpls-panorama,
     .spoonbridge-and-cherry {
@@ -295,14 +241,12 @@ th {
         margin-left: 10%;
         margin-right: 10%;
     }
-
     .mpls-panorama img,
     .spoonbridge-and-cherry img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
-
     /* Styles used on history.html for screen media */
     .image-three-column {
         float: left;
@@ -310,44 +254,35 @@ th {
         padding: 5px;
         text-align: center;
     }
-
     @media screen and (max-width: 775px) {
         .image-three-column {
             width: 98%;
         }
     }
-
     /* Styles used on index.html for screen media */
     .text-content {
         padding: 2rem;
     }
-
     .minneapolis-image,
     .saint-paul-image {
         width: 271px;
         height: 141px;
     }
-
     .minneapolis-image-caption,
     .saint-paul-image-caption {
         width: 271px;
     }
-
-	@media only screen and (max-width: 600px) {
-		.minneapolis-image,
-		.saint-paul-image {
-			width: 135.50px;
-			height: 70.50px;
-		}
-
-		.minneapolis-image-caption,
-    	.saint-paul-image-caption {
-        	width: 135.50px;
-    	}
-
-
-	}
-
+    @media only screen and (max-width: 600px) {
+        .minneapolis-image,
+        .saint-paul-image {
+            width: 135.50px;
+            height: 70.50px;
+        }
+        .minneapolis-image-caption,
+        .saint-paul-image-caption {
+            width: 135.50px;
+        }
+    }
     /* Styles used on population.html for screen media */
     #mn-metro-map-figure {
         width: 50%;
@@ -355,40 +290,32 @@ th {
         margin-right: 25%;
         text-align: center;
     }
-
     .header-superscript-text {
         font-weight: lighter;
     }
-
     figure caption {
         font-size: 1.5em;
         font-style: italic;
         margin-bottom: 5px;
         color: #01426a;
     }
-
     th {
         background-color: #01426a;
         color: #fff;
     }
-
     td {
         color: #01426a;
     }
-
     th,
     td {
         border: 1px solid #ddd;
     }
-
     tr:nth-child(even) {
         background-color: #f2f2f2;
     }
-
     tr:nth-child(odd) {
         background-color: #ddd;
     }
-
     tr:hover,
     th:hover,
     td:hover {
@@ -396,7 +323,6 @@ th {
         border: solid 6px #ff7753;
         color: #ff7753;
     }
-
     #minneapolis-population,
     #saint-paul-population {
         background: #fff;
@@ -409,340 +335,286 @@ th {
         text-align: center;
         padding-bottom: 20px;
     }
-
-    #minneapolis-population > ul,
-    #saint-paul-population > ul {
+    #minneapolis-population>ul,
+    #saint-paul-population>ul {
         padding: 0;
         list-style-position: inside;
     }
-
-	@media only screen and (max-width: 600px) {
-		#minneapolis-population,
-		#saint-paul-population {
-			background: #fff;
-			border: 2px inset #01426a;
-			display: inline-block;
-			width: 70%;
-			margin-left: 15%;
-			margin-right: 15%;
-			margin-top: 30px;
-			text-align: center;
-			padding-bottom: 10px;
-		}
-
-		#minneapolis-population > ul > li,
-		#saint-paul-population >  ul > li {
-			padding: 3px;
-		}
-
-		.population-heading {
-			margin-top: 10px;
-		}
-	}
-
+    @media only screen and (max-width: 600px) {
+        #minneapolis-population,
+        #saint-paul-population {
+            background: #fff;
+            border: 2px inset #01426a;
+            display: inline-block;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 30px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        #minneapolis-population>ul>li,
+        #saint-paul-population>ul>li {
+            padding: 3px;
+        }
+        .population-heading {
+            margin-top: 10px;
+        }
+    }
     /* Styles used on tourism.html for screen media */
     #moa-section,
     #sculpture-garden-section,
     #guthrie-theater-section {
         padding-bottom: 50px;
     }
-
     #moa-print-description {
         display: none;
     }
-
     #moa-image-1,
     #moa-image-2 {
         width: 338px;
         height: 225px;
     }
-
     .moa-image-caption {
         width: 338px;
     }
-
-	@media only screen and (max-width: 600px) {
-		#moa-image-1,
-		#moa-image-2 {
-			width: 169px;
-			height: 112.5px;
-			
-		}
-
-		.moa-image-caption {
-			width: 169px;
-
-		}
-
-		#moa-1-figure,
-		#moa-2-figure {
-			margin-left: 0;
-			margin-right: 0;
-		} 
-	}
-
+    @media only screen and (max-width: 600px) {
+        #moa-image-1,
+        #moa-image-2 {
+            width: 169px;
+            height: 112.5px;
+        }
+        .moa-image-caption {
+            width: 169px;
+        }
+        #moa-1-figure,
+        #moa-2-figure {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
     #walker-art-center-print-description {
         display: none;
     }
-
     #guthrie-theater-print-description {
         display: none;
     }
-
     #guthrie-theater-figure {
         display: none;
     }
-
-	form {
-		border-radius: 3px;
-		padding: 50px;
-		background-color: #f2f2f2;
-		border: 2px solid #01426a;
-		/* width: 90%; */
-		margin: 0 auto;
-		color: #01426a;
-	}
-
-	input[type="text"], input[type="password"], textarea {
-		width: 100%;
-		padding: 12px 20px;
-		margin: 8px 0;
-		display: inline-block;
-		border: 2px solid #01426a;
-		border-radius: 4px;
-		box-sizing: border-box;
-	}
-
-	p.hidden,
-	.hiddenInput {
-		display: none;
-	}
-
-	.login,
-	.registration {
-		position: relative;
-		margin: 0 auto;
-		padding: 20px 20px 20px 20px;
-		width: 500px;
-		border-radius: 3px;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.login,
-		.registration {
-			width: 80%;
-		}
-
-	}
-
-
-	.registration-form {	
-		margin-top: 30px;
-		margin-bottom: 80px;
-		border: 4px solid #01426a;
-		padding: 30px;
-	}
-
-	.login-form {
-		margin-bottom: 80px;
-	}
-
-	.welcome-class{
-		text-align: center;
-	}
-
-	#username-feedback-login-page, 
-	#password-feedback-login-page,
-	#password-feedback-register-page,
-	#username-feedback-register-page,
-	#email-feedback-register-page,
-	#review-title-feedback,
-	#review-description-feedback {
-		width: 80%;
-		padding: 8px 12px;
-		border-radius: 4px;
-		border-style: solid;
-		border-width: 1px;
-		margin-top: 0;
-		margin-bottom: 30px;
-		font-size: 0.8em;
-		box-sizing: border-box;
-		color: #842029;
-		background-color: #f8d7da;
-		border-color: #f5c2c7;
-	}
-
-
-		.create-post-btn {
-		padding: 14px 10px;
-		text-align: center;
-		background-color: #01426a;
-		color: white;
-		text-decoration: none;
-		border-radius: 5px;
-		width: 200px;
-		font-size: 0.95em;
-		min-width: 180px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		
-	}
-
-	.create-post-btn:hover {
-		background-color: white;
-		border: 2px solid #01426a;
-		color: #01426a;
-	}
-
-
-	@media only screen and (max-width: 600px) {
-		.create-post-btn {
-			font-size: 0.75em;
-			padding: 10px 6px;
-		}
-	}
-
-
-	.registration-login-message {
-		text-align: center;
-		
-		margin: 50px 0 0 0;
-	}
-
-	.message-on-login-page,
-	.need-to-create-an-account {
-		text-align: center;
-	}
-
-	.message-on-login-page {
-		margin-top: 80px;
-		margin-bottom: 10px;
-	}
-
-	input[type=submit] {
-		width: 50%;
-		margin-left: 25%;
-		margin-right: 25%;
-		padding: 14px 20px;
-		margin-top: 20px;
-	}
-
-	.enabled-submit {
-		color: white;
-		background-color: #01426a;
-		border: none;
-		cursor: pointer;
-	}
-
-	.disabled-submit {
-		border: 1px solid #999999;
-		background-color: #cccccc;
-		color: #666666;
-		cursor: not-allowed;
-	}
-
-	@media only screen and (max-width: 600px) {
-		h2.review-text {
-			text-align: center;
-			margin-left: 0;
-			margin-right: 0;
-		}
-		form {
-			padding: 20px;
-			width: 60%;
-			display: table-cell;
-			text-align: center;
-			
-		}
-
-		input[type="text"], input[type="password"], textarea{
-			padding: 6px 10px;
-			margin: 5px 0;
-		}
-
-		input[type=submit] {
-			padding: 7px 10px;
-			font-size: 0.75em;
-		}
-
-	}
-
-	@media only screen and (max-width: 300px) {
-		form {
-			width: 10%;	
-		}
-	}
-
-	#create-post-form {
-		margin-bottom: 100px;
-		margin-top: 50px;
-	}
-
-	.submit-btn,
-	.submit-btn:link,
-	.submit-btn:visited {
-		margin: 0 auto;
-		padding: 30px;
-		background-color: #01426a;
-		color: white;
-		border: none;
-		border-radius: 2px;
-	}
-
-	.submit-btn:hover,
-	.submit-btn:focus,
-	.submit-btn:active {
-		background-color: white;
-		border: 2px solid #01426a;
-		color: #01426a;
-	}
-
-	#review-page-description {
-		color: #000;
-		margin-bottom: 0;
-		text-align: center;
-	}
-
-	#review-page-description-span {
-		font-style: italic;
-	}
-
-	.logout-btn-div {
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	.logout-btn,
-	.logout-btn:link,
-	.logout-btn:visited {
-		padding: 10px 20px;
-		background-color: #01426a;
-		color: white;
-		border: none;
-		border-radius: 8px;
-		text-decoration: none;
-		margin: 20px 20px 0 0;
-	}
-
-	.logout-btn:hover,
-	.logout-btn:focus,
-	.logout-btn:active {
-		color: #01426a;
-		background-color: white;
-		border: 4px solid #01426a;
-		font-weight: 800;
-	}
-
-	#review-details-table {
-		margin-top: 50px;
-		border: 2px solid #01426a;
-		padding: 5px;
-	}
-
-	.success-message {
-		color: green;
-		text-align: center;
-	}
-
+    form {
+        border-radius: 3px;
+        padding: 50px;
+        background-color: #f2f2f2;
+        border: 2px solid #01426a;
+        /* width: 90%; */
+        margin: 0 auto;
+        color: #01426a;
+    }
+    input[type="text"],
+    input[type="password"],
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #01426a;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    p.hidden,
+    .hiddenInput {
+        display: none;
+    }
+    .login,
+    .registration {
+        position: relative;
+        margin: 0 auto;
+        padding: 20px 20px 20px 20px;
+        width: 500px;
+        border-radius: 3px;
+    }
+    @media only screen and (max-width: 600px) {
+        .login,
+        .registration {
+            width: 80%;
+        }
+    }
+    .registration-form {
+        margin-top: 30px;
+        margin-bottom: 80px;
+        border: 4px solid #01426a;
+        padding: 30px;
+    }
+    .login-form {
+        margin-bottom: 80px;
+    }
+    .welcome-class {
+        text-align: center;
+    }
+    #username-feedback-login-page,
+    #password-feedback-login-page,
+    #password-feedback-register-page,
+    #username-feedback-register-page,
+    #email-feedback-register-page,
+    #review-title-feedback,
+    #review-description-feedback {
+        width: 80%;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 0.8em;
+        box-sizing: border-box;
+        color: #842029;
+        background-color: #f8d7da;
+        border-color: #f5c2c7;
+    }
+    .create-post-btn {
+        padding: 14px 10px;
+        text-align: center;
+        background-color: #01426a;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 200px;
+        font-size: 0.95em;
+        min-width: 180px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .create-post-btn:hover {
+        background-color: white;
+        border: 2px solid #01426a;
+        color: #01426a;
+    }
+    @media only screen and (max-width: 600px) {
+        .create-post-btn {
+            font-size: 0.75em;
+            padding: 10px 6px;
+        }
+    }
+    .registration-login-message {
+        text-align: center;
+        margin: 50px 0 0 0;
+    }
+    .message-on-login-page,
+    .need-to-create-an-account {
+        text-align: center;
+    }
+    .message-on-login-page {
+        margin-top: 80px;
+        margin-bottom: 10px;
+    }
+    input[type=submit] {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding: 14px 20px;
+        margin-top: 20px;
+    }
+    .enabled-submit {
+        color: white;
+        background-color: #01426a;
+        border: none;
+        cursor: pointer;
+    }
+    .disabled-submit {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+        cursor: not-allowed;
+    }
+    @media only screen and (max-width: 600px) {
+        h2.review-text {
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        form {
+            padding: 20px;
+            width: 60%;
+            display: table-cell;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea {
+            padding: 6px 10px;
+            margin: 5px 0;
+        }
+        input[type=submit] {
+            padding: 7px 10px;
+            font-size: 0.75em;
+        }
+    }
+    @media only screen and (max-width: 300px) {
+        form {
+            width: 10%;
+        }
+    }
+    #create-post-form {
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+    .submit-btn,
+    .submit-btn:link,
+    .submit-btn:visited {
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #01426a;
+        color: white;
+        border: none;
+        border-radius: 2px;
+    }
+    .submit-btn:hover,
+    .submit-btn:focus,
+    .submit-btn:active {
+        background-color: white;
+        border: 2px solid #01426a;
+        color: #01426a;
+    }
+    #review-page-description {
+        color: #000;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #review-page-description-span {
+        font-style: italic;
+    }
+    .logout-btn-div {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .logout-btn,
+    .logout-btn:link,
+    .logout-btn:visited {
+        padding: 10px 20px;
+        background-color: #01426a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        margin: 20px 20px 0 0;
+    }
+    .logout-btn:hover,
+    .logout-btn:focus,
+    .logout-btn:active {
+        color: #01426a;
+        background-color: white;
+        border: 4px solid #01426a;
+        font-weight: 800;
+    }
+    #review-details-table {
+        margin-top: 50px;
+        border: 2px solid #01426a;
+        padding: 5px;
+    }
+    .success-message {
+        color: green;
+        text-align: center;
+    }
 }

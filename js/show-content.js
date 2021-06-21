@@ -1,15 +1,15 @@
-var xmlhttp = new XMLHttpRequest();
-var url = "show_content.json";
+(function () {
+const xmlhttp = new XMLHttpRequest();
+const url = "show_content.json";
 
 xmlhttp.onreadystatechange = function() {
 if (this.readyState == 4 && this.status == 200) {
-    var contentObj = JSON.parse(this.responseText);
+    const contentObj = JSON.parse(this.responseText);
    createReviewDetailsTable(contentObj);
     }
 };
 
 function createReviewDetailsTable(obj) {
-
 	const reviewDetailsTable = document.getElementById('review-details-table');
 	const reviewDetailsCaption = document.createElement('caption');
 	const reviewDetailsCaptionText = document.createTextNode('Review Details');
@@ -18,7 +18,6 @@ function createReviewDetailsTable(obj) {
 	reviewDetailsCaption.setAttributeNode(captionIdAttribute);
 	reviewDetailsCaption.appendChild(reviewDetailsCaptionText);
 	reviewDetailsTable.appendChild(reviewDetailsCaption);
-
 
 	for (const [key, value] of Object.entries(obj)) {
 		const tr = document.createElement('tr');
@@ -36,9 +35,7 @@ function createReviewDetailsTable(obj) {
 		reviewDetailsTable.appendChild(tr);
 	}
 }
-
-
-
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 
+}());

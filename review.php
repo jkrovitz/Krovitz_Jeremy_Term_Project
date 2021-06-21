@@ -1,9 +1,10 @@
-<?php 
-	session_start();
-	//Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
-	if(!isset($_SESSION["username"])) {
-		header("Location: login.php");
-	}
+<?php
+session_start();
+//Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
+if (!isset($_SESSION["username"]))
+{
+    header("Location: login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,37 +41,33 @@
 			<a class="create-post-btn" href="write_review.php">Write a review</a>
 		</div>
 		<?php
-			include '../../connection.php';
+include '../../connection.php';
 
-			$query = mysqli_query($conn, "SELECT post_id, post_title, poster, post_desc FROM posting;");
+$query = mysqli_query($conn, "SELECT post_id, post_title, poster, post_desc FROM posting;");
 
-			?>
-
-		<p id="post-title"></p>
+?>
 
 		<table class="review-table">
 			<?php
-					
-	 	$postdata = [];
-		while($data = mysqli_fetch_assoc($query)) {
-		$url = "show_content.php?id=".$data["post_id"];
-	
-		$postdata[] = array(
-			"post_id" =>  $data["post_id"],
-			"post_title" => $data["post_title"],
-			"poster" => $data["poster"],
-			"post_desc" => $data["post_desc"],
-			"url" => $url
-		);
-		}
+$postdata = [];
+while ($data = mysqli_fetch_assoc($query))
+{
+    $url = "show_content.php?id=" . $data["post_id"];
 
-		$file = "data.json";
+    $postdata[] = array(
+        "post_id" => $data["post_id"],
+        "post_title" => $data["post_title"],
+        "poster" => $data["poster"],
+        "post_desc" => $data["post_desc"],
+        "url" => $url
+    );
+}
 
-		if (file_put_contents($file, json_encode($postdata)))
-			echo "";
-		else 
-		echo ("failed");
-		?>
+$file = "data.json";
+
+if (file_put_contents($file, json_encode($postdata))) echo "";
+else echo ("failed");
+?>
 
 		</table>
 

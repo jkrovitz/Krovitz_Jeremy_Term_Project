@@ -1,6 +1,5 @@
 (function () {
 	'use strict';
-
 	document.registrationForm.noValidate = true;
 	const USERNAME_REGISTER_PAGE = document.getElementById('username-register-page');
 	const PASSWORD_REGISTER_PAGE = document.getElementById('password-register-page');
@@ -23,9 +22,5 @@
                 SUBMIT_REGISTER_PAGE.removeAttribute('class', 'enabled-submit');
             }
 		}, false);
-
-
-
-
 	});
 }());

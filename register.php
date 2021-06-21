@@ -1,9 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Create connection
-	include '../../connection.php';
+    include '../../connection.php';
     
-    //We use htmlspecialchars to prevent HTML injection
     $errors   = "";
     $username = htmlspecialchars($_POST["username"]);
     $email    = htmlspecialchars($_POST["email"]);
@@ -15,11 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     else {
-        
-        $query = mysqli_query($conn, "SELECT username from register WHERE username='$username';");
-		$query1 = mysqli_query($conn, "SELECT email from register WHERE email='$email';");
-        $data  = mysqli_fetch_assoc($query);
-		$data1 = mysqli_fetch_assoc($query1);
+        $query  = mysqli_query($conn, "SELECT username from register WHERE username='$username';");
+        $query1 = mysqli_query($conn, "SELECT email from register WHERE email='$email';");
+        $data   = mysqli_fetch_assoc($query);
+        $data1  = mysqli_fetch_assoc($query1);
         
         if (!is_null($data["username"])) {
             $errors = "Username already exists!";
@@ -27,13 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors = "Email already exists!";
         } else {
             $password = password_hash($password, PASSWORD_DEFAULT);
-            $query = mysqli_query($conn, "INSERT INTO register (username, email, password) VALUES ('$username', '$email', '$password')");
+            $query    = mysqli_query($conn, "INSERT INTO register (username, email, password) VALUES ('$username', '$email', '$password')");
             
             if ($query) {
-				$array_to_convert = array('success' => 'User created!');
-				$json_array = json_encode($array_to_convert);
-				$register_file = "register.json";
-				file_put_contents($register_file, $json_array);
+				header("Location: login.php");
             } else {
                 echo "It's not working";
             }
@@ -43,9 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
-
 <html>
 
 	<head>
@@ -56,7 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta content="Register" name="title" />
 		<meta content="User can create an account, so they can post a review." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
-		<?php include 'favicons.php'; ?>
+		<?php
+include 'favicons.php';
+?>
 		<link href="style/screen.css" rel="preload" as="style" />
 		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
@@ -77,8 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 				<div class="registration">
 					<p class="registration-login-message">Already have an account? <a href="login.php">Login</a></p>
-					<form name="registrationForm" class="registration-form"
-						action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+					<form name="registrationForm" class="registration-form" action="<?php
+echo htmlspecialchars($_SERVER['PHP_SELF']);
+?>" method="POST">
 						<h2 class="review-text">Register</h2>
 						<input type="text" id="username-register-page" name="username" placeholder="username">
 						<p id="username-feedback-register-page" class="hidden">Username must have length between 5 and
@@ -88,14 +83,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							may
 							only consist of alphanumeric characters, -, or _.</p>
 						<input type="text" id="email-register-page" name="email" placeholder="E-mail">
-						<p id="email-feedback-register-page" class="hidden">Invalid email.</p>
+						<p id="email-feedback-register-page" class="hidden">Invalid email format.</p>
 						<input type="password" id="password-register-page" name="password" placeholder="Password"
 							autocomplete="on">
 						<p id="password-feedback-register-page" class="hidden">Password must contain one lowercase
 							letter,
 							one
 							uppercase
-							letter, one digit, one special character, and is at least eight characters long.</p>
+							letter, one digit, one special character, and is at least eight characters long and no more
+							than 32 characters long.</p>
 						<input type="submit" value="Submit" id="submit-register-page" class="disabled-submit">
 					</form>
 				</div>

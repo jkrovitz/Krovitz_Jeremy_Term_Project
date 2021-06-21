@@ -14,8 +14,7 @@
 		<link href="style/screen.css" rel="stylesheet" type="text/css" />
 		<link href="style/header.css" rel="preload" as="style" />
 		<link href="style/header.css" rel="stylesheet" type="text/css" />
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer>
-		</script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
 		<script src="js/header.js" defer></script>
 	</head>
 
@@ -41,14 +40,18 @@
 				<h2>Overview of the Twin Cities</h2>
 				<ul>
 					<li>A large metropolitan area, Minneapolis&ndash;St. Paul, is built around and split by the
-						Mississippi River in east central Minnesota.</li>
+						Mississippi River in east central Minnesota.
+					</li>
 					<li>This area is commonly referred to as the Twin Cities because of its two largest cities,
 						Minneapolis, the city with the largest population in Minnesota, and its neighbor, St. Paul, the
-						state capital.</li>
+						state capital.
+					</li>
 					<li>While Minneapolis&ndash;St. Paul are given the nickname the Twin Cities, the two are actually
-						quite different, independent from one another, and have well&hyphen;defined borders.</li>
+						quite different, independent from one another, and have well&hyphen;defined borders.
+					</li>
 					<li>Minneapolis is located on the west side of the Mississippi River and is considered to be more
-						modern than St. Paul, which sits on the eastern side of the Mississippi River.</li>
+						modern than St. Paul, which sits on the eastern side of the Mississippi River.
+					</li>
 				</ul>
 			</div>
 			<div class="image-row">

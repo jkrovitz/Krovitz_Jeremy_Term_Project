@@ -1,9 +1,10 @@
-<?php 
+<?php
 
-	session_start();
-	if(is_null($_SESSION["username"])) {
-		header("Location: login.php");
-	}
+session_start();
+if (is_null($_SESSION["username"]))
+{
+    header("Location: login.php");
+}
 
 ?>
 
@@ -36,35 +37,25 @@
 					<a class="logout-btn" href="logout.php">Logout</a>
 				</div>
 				<a class="create-post-btn" href="review.php">Go back to all reviews</a>
-
-
-				<?php 
-			include '../../connection.php';
-
-		$id = $_GET['id'];
-
-
-			if(is_null($id)) {
-				header("Location: review.php");
-			}
-			
-			$query = mysqli_query($conn, "SELECT post_title, poster, post_desc FROM posting WHERE  post_id='$id';");
-			$review_data = mysqli_fetch_assoc($query);
-
-
-			$review_file = "show_content.json";
-			if(file_put_contents($review_file, json_encode($review_data)))
-			echo "";
-			else echo ("failed");
-		?>
-
+				<?php
+include '../../connection.php';
+$id = $_GET['id'];
+if (is_null($id))
+{
+    header("Location: review.php");
+}
+$query = mysqli_query($conn, "SELECT post_title, poster, post_desc FROM posting WHERE  post_id='$id';");
+$review_data = mysqli_fetch_assoc($query);
+$review_file = "show_content.json";
+if (file_put_contents($review_file, json_encode($review_data))) echo "";
+else echo ("failed");
+?>
 				<table id="review-details-table"></table>
 
 				<div id="footer-container">
 					<footercomponent></footercomponent>
 				</div>
 			</div>
-
 	</body>
 
 </html>

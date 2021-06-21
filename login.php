@@ -1,32 +1,41 @@
-<?php 
-	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		include '../../connection.php';
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    include '../../connection.php';
 
-		$errors = "";
-		$username = htmlspecialchars($_POST["username"]);
-		$password = htmlspecialchars($_POST["password"]);
+    $errors = "";
+    $username = htmlspecialchars($_POST["username"]);
+    $password = htmlspecialchars($_POST["password"]);
 
+    if (empty($username) or empty($password))
+    {
+        $errors = "Invalid inputs!";
+    }
+    else
+    {
+        $query = mysqli_query($conn, "SELECT username, password FROM register WHERE username='$username';");
+        $data = mysqli_fetch_assoc($query);
 
-		if(empty($username) or empty($password)) {
-			$errors = "Invalid inputs!";
-		} else {
-			$query = mysqli_query($conn, "SELECT username, password FROM register WHERE username='$username';");
-			$data = mysqli_fetch_assoc($query);
+        if (is_null($data["username"]))
+        {
+            $errors = "Username doesn't exist!";
+        }
+        else
+        {
+            if (password_verify($password, $data["password"]))
+            {
+                session_start();
 
-			if(is_null($data["username"])) {
-				$errors = "Username doesn't exist!";
-			} else {
-				if (password_verify($password, $data["password"])) {
-					session_start();
-					
-					$_SESSION["username"] = $username;
-					header("Location: review.php");
-				} else {
-					$errors = "Password is not correct!";
-				}
-			}
-		}
-	}
+                $_SESSION["username"] = $username;
+                header("Location: review.php");
+            }
+            else
+            {
+                $errors = "Password is not correct!";
+            }
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>

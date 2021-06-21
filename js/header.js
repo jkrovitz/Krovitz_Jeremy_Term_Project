@@ -1,5 +1,5 @@
-Vue.component('headercomponent',{
-   template : `<header>
+Vue.component('headercomponent', {
+	template: `<header>
         	<h1>Minneapolis&ndash;St. Paul: The Twin Cities</h1>
             <nav class="main-nav">
 				<a href="index.php">Home</a> 
@@ -11,31 +11,29 @@ Vue.component('headercomponent',{
 		</nav>
         </header>`
 });
-var vm = new Vue({
-   el: '#header-container'
+const NAV = new Vue({
+	el: '#header-container'
 });
 
-var navEl = document.getElementsByTagName("NAV")[0];
-console.log(navEl);
+const NAV_EL = document.getElementsByTagName("NAV")[0];
 
-navEl.addEventListener("click", function () {
+NAV_EL.addEventListener("click", function() {
 	showAndHideNav();
 }, false);
 
 function showAndHideNav() {
-	if (navEl.className === "main-nav") {
-		navEl.className +=  " mobile-nav";
+	if (NAV_EL.className === "main-nav") {
+		NAV_EL.className += " mobile-nav";
 	} else {
-		navEl.className = "main-nav";
+		NAV_EL.className = "main-nav";
 	}
 }
 
-Vue.component('footercomponent',{
-   template : `<footer>
+Vue.component('footercomponent', {
+	template: `<footer>
             <p class="copyright-class">Jeremy Krovitz &copy; 2021</p>
         </footer>`
 });
-var vm = new Vue({
-   el: '#footer-container'
+const FOOTER = new Vue({
+	el: '#footer-container'
 });
-

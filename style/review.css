@@ -1,42 +1,42 @@
 .review-table {
-	border-collapse: collapse;
-	width: 50%;
-	margin-left: 25%;
-	margin-right: 25%;
-	margin-top: 50px;
-	margin-bottom: 100px;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
-.review-table td, .review-table th {
-	border: 1px solid #01426a;
-	color: #01426a;
+.review-table td,
+.review-table th {
+    border: 1px solid #01426a;
+    color: #01426a;
 }
 
 td {
-	background-color: white;
-	padding: 10px;
+    background-color: white;
+    padding: 10px;
 }
 
 .welcome-class {
-	color: #01426a;
-	text-align: center;
-	margin: 50px 0 0 0;
+    color: #01426a;
+    text-align: center;
+    margin: 50px 0 0 0;
 }
 
 .center-btn {
-	display: flex;
-	position: relative;
-	justify-content: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
 
 .copyright-class {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	margin: 0;
-	background: #1c252e; 
-	padding: 1em;
-	text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background: #1c252e;
+    padding: 1em;
+    text-align: center;
 }
-

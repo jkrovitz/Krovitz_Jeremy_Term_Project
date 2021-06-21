@@ -1,44 +1,38 @@
-<?php 
-	session_start();
-	//Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
-	if(is_null($_SESSION["username"])) {
-		header("Location: login.php");
-	}
-
-	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		include '../../connection.php';
-	}
-
-	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$errors = "";
-		$poster = $_SESSION["username"];
-		$post_title = htmlspecialchars($_POST["title"]);
-		$post_desc = htmlspecialchars($_POST["desc"]);
-
-		if (empty($post_title) or empty($post_desc)) {
-			$errors = "Invalid inputs";
-		} else {
-			//make sure post titles are not the same.
-			$query = mysqli_query($conn, "SELECT post_title FROM posting WHERE post_title='$post_title';");
-			$data = mysqli_fetch_assoc($query);
-			if(!is_null($data["post_title"])) {
-				$errors = "Post name already exists!";
-			} else {
-				$query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
-
-				if ($query) {
-					header("Location: review.php");
-				} else {
-					echo "It did not work";
-				}
-			}
-		}
-	}
-
+<?php
+session_start();
+//Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
+if (is_null($_SESSION["username"])) {
+    header("Location: login.php");
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include '../../connection.php';
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $errors = "";
+    $poster = $_SESSION["username"];
+    $post_title = htmlspecialchars($_POST["title"]);
+    $post_desc = htmlspecialchars($_POST["desc"]);
+    if (empty($post_title) or empty($post_desc)) {
+        $errors = "Invalid inputs";
+    } else {
+        //make sure post titles are not the same.
+        $query = mysqli_query($conn, "SELECT post_title FROM posting WHERE post_title='$post_title';");
+        $data = mysqli_fetch_assoc($query);
+        if (!is_null($data["post_title"])) {
+            $errors = "Post name already exists!";
+        } else {
+            $query = mysqli_query($conn, "INSERT INTO posting(poster, post_title, post_desc) values ('$poster', '$post_title', '$post_desc');");
+            if ($query) {
+                header("Location: review.php");
+            } else {
+                echo "It did not work";
+            }
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
-
 <html>
 
 	<head>
