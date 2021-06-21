@@ -189,7 +189,7 @@
     }
     .image-column {
         float: left;
-        width: 50%;
+        width: 48%;
         padding: 5px;
         text-align: center;
     }
@@ -250,7 +250,7 @@
     /* Styles used on history.html for screen media */
     .image-three-column {
         float: left;
-        width: 33.33%;
+        width: 30%;
         padding: 5px;
         text-align: center;
     }
