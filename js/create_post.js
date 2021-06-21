@@ -3,7 +3,7 @@
 	document.createReviewForm.noValidate = true;
 	const MIN_LENGTH_TITLE = 5;
 	const MIN_LNEGTH_DESCRIPTION = 15;
-	const MAX_LENGTH_TITLE = 30;
+	const MAX_LENGTH_TITLE = 50;
 	const MAX_LENGTH_DESCRIPTION = 1000;
 	const REVIEW_TITLE = document.getElementById('review-title');
 	const REVIEW_DESCRIPTION = document.getElementById('review-description');

@@ -1,6 +1,7 @@
 show_content.json
 data.json
 register.json
-.DS_Store
-images/.DS_Store
+**/.DS_Store
 usernames.json
+**/config.php
+**/error_log

@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include '../../connection.php';
+    include './config.php';
     
     $errors   = "";
     $username = htmlspecialchars($_POST["username"]);
@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors = "Email already exists!";
         } else {
             $password = password_hash($password, PASSWORD_DEFAULT);
-            $query    = mysqli_query($conn, "INSERT INTO register (username, email, password) VALUES ('$username', '$email', '$password')");
+            $query = mysqli_query($conn, "INSERT INTO register (username, email, password) VALUES ('$username', '$email', '$password')");
             
             if ($query) {
-				header("Location: login.php");
+				header("Location: ./login.php");
             } else {
                 echo "It's not working";
             }

@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    include '../../connection.php';
+    include './config.php';
 
     $errors = "";
     $username = htmlspecialchars($_POST["username"]);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 session_start();
 
                 $_SESSION["username"] = $username;
-                header("Location: review.php");
+                header("Location: ./review.php");
             }
             else
             {

@@ -2,10 +2,10 @@
 session_start();
 //Checks if the user is logged in. If the user is not logged in, the user is taken to login.php
 if (is_null($_SESSION["username"])) {
-    header("Location: login.php");
+    header("Location: ./login.php");
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include '../../connection.php';
+    include './config.php';
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors = "";
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 			<input type="text" id="review-title" name="title" placeholder="Title">
 			<p id="review-title-feedback" class="hidden">Review title must be at least five characters and no more than
-				30 characters.</p>
+				50 characters.</p>
 			<textarea id="review-description" rows="25" cols="50" name="desc"
 				placeholder="Review description"></textarea>
 			<p id="review-description-feedback" class="hidden">Review description must be at least 15 characters and

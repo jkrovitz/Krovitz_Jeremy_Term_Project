@@ -38,7 +38,7 @@ if (is_null($_SESSION["username"]))
 				</div>
 				<a class="create-post-btn" href="review.php">Go back to all reviews</a>
 				<?php
-include '../../connection.php';
+include './config.php';
 $id = $_GET['id'];
 if (is_null($id))
 {
