@@ -33,20 +33,21 @@
 <html>
 
 	<head>
-		<meta charset="utf-8">
 		<title>Login Page</title>
+		<meta charset="UTF-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<?php include 'favicons.php'; ?>
 		<meta content="Jeremy Krovitz" name="author" />
-		<link href="style/header.css" rel="preload" as="style" />
-		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/screen.css" rel="preload" as="style" />
 		<link href="style/screen.css" rel="stylesheet" type="text/css" />
+		<link href="style/header.css" rel="preload" as="style" />
+		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
-		<script defer src="js/header.js"></script>
 		<script defer src="js/login.js"></script>
 		<script defer src="js/account.js"></script>
+		<script defer src="js/header.js"></script>
 	</head>
 
 	<body>

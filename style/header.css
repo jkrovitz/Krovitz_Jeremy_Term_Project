@@ -51,6 +51,7 @@
 
 		.hamburger-menu-icon {
 			font-size: 1.3em;
+			cursor: pointer;
 		}
 
 		.main-nav.mobile-nav {

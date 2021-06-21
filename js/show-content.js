@@ -22,7 +22,6 @@ function createReviewDetailsTable(obj) {
 
 	for (const [key, value] of Object.entries(obj)) {
 		const tr = document.createElement('tr');
-		console.log(tr);
 		const th = document.createElement('th');
 		const att = document.createAttribute('scope');
 		att.value = 'row';

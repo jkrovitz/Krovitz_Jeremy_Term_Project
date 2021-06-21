@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$json_array = json_encode($array_to_convert);
 				$register_file = "register.json";
 				file_put_contents($register_file, $json_array);
-				// header("Location: login.php");
             } else {
                 echo "It's not working";
             }
@@ -58,10 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<meta content="User can create an account, so they can post a review." name="description" />
 		<meta content="Jeremy Krovitz" name="author" />
 		<?php include 'favicons.php'; ?>
-		<link href="style/header.css" rel="preload" as="style" />
-		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/screen.css" rel="preload" as="style" />
 		<link href="style/screen.css" rel="stylesheet" type="text/css" />
+		<link href="style/header.css" rel="preload" as="style" />
+		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
@@ -81,7 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					<form name="registrationForm" class="registration-form"
 						action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 						<h2 class="review-text">Register</h2>
-						<p><?php echo $errors; ?></p>
 						<input type="text" id="username-register-page" name="username" placeholder="username">
 						<p id="username-feedback-register-page" class="hidden">Username must have length between 5 and
 							20

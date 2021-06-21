@@ -13,10 +13,12 @@
 		<title>Reviews of the Twin Cities</title>
 		<meta charset="utf-8">
 		<?php include 'favicons.php'; ?>
-		<link href="style/header.css" rel="preload" as="style" />
-		<link href="style/header.css" rel="stylesheet" type="text/css" />
+		<meta charset="UTF-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 		<link href="style/screen.css" rel="preload" as="style" />
 		<link href="style/screen.css" rel="stylesheet" type="text/css" />
+		<link href="style/header.css" rel="preload" as="style" />
+		<link href="style/header.css" rel="stylesheet" type="text/css" />
 		<link href="style/review.css" rel="preload" as="style" />
 		<link href="style/review.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14" defer></script>
